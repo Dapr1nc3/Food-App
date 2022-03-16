@@ -2,7 +2,7 @@ const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
 
 // import schema from recipe.js
-const RecipeSchema = require('./models/Recipe');
+// const recipe = require('./Recipe');
 
 const userSchema = new Schema(
   {
@@ -22,7 +22,9 @@ const userSchema = new Schema(
       required: true,
     },
     // set savedRecipes to be an array of data that adheres to the RecipeSchema
-    savedRecipes: [RecipeSchema],
+    savedRecipes: [{
+      type: Schema.Types.ObjectId,
+      ref: 'Recipe'}]
   },
   // set this to use virtual below
   {
