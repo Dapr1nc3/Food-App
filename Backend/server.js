@@ -23,6 +23,11 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/recipe-api', {
 // Use this to log mongo queries being executed!
 mongoose.set('debug', true);
 
+// create an Express GET route to connect Backend to Frontend
+app.get('/express_backend', (req, res) => { 
+  res.send({ express: 'YOUR EXPRESS BACKEND IS CONNECTED TO REACT' }); 
+});
+
 db.once('open', () => {
   app.listen(PORT, () => console.log(`Server Successfully listening on localhost:${PORT}`));
 });
