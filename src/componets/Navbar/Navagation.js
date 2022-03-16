@@ -22,13 +22,13 @@ function Navigation() {
               <Nav.Link href="/contact">Contact</Nav.Link>
             </Nav>
             <Nav>
-              <Button href="#signUp" className="mx-2" variant="danger">
+              <Button href="#logIn" variant="danger">
+                Log in
+              </Button>
+              <Button href="#signUp" className="mx-2" variant="primary">
                 Sign up
               </Button>
             </Nav>
-            <Button href="#logIn" variant="primary">
-              Log in
-            </Button>
           </Navbar.Collapse>
         </Container>
       </Navbar>
