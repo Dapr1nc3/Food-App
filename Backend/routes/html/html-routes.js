@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const authorization = require("../../utils/auth");
+const { authMiddleware } = require("../../utils/auth");
 
 // TODO: might need to change path to connect the pages to frontend
 // route for landing page
@@ -8,7 +8,7 @@ router.get("/", (req, res) => {
 });
 
 // route for page 2
-router.get("/profile", authorization, (req, res) => {
+router.get("/profile", authMiddleware, (req, res) => {
   res.render("profile");
 });
 
