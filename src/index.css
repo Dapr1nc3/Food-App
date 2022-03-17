@@ -12,6 +12,17 @@ code {
     monospace;
 }
 
+/* 404 page  */
 .not-found {
   height: calc(100vh - 56px);
+}
+
+/* About page */
+.about-header {
+  padding-right: 40%;
+}
+
+.about-image {
+  margin-right: 20%;
+  display: flex;
 }
