@@ -2,7 +2,7 @@ const { User, Recipe } = require('../models');
 
 const resolvers = {
     Query: {
-      recipe: async (parent, { username }) => {
+      recipes: async (parent, { username }) => {
           const params = username ? { username } : {}; 
         return Recipe.find(params).sort({ createdAt: -1 });
       },

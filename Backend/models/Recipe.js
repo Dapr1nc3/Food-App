@@ -11,7 +11,7 @@ const RecipeSchema = new Schema(
     //   required: true,
     //   trim: true
     // },
-    writtenByUsername: {
+    username: {
       type: String,
       required: true
     },
@@ -19,7 +19,7 @@ const RecipeSchema = new Schema(
       type: String,
       required: "Please input your recipe",
       minlength: [1, 'Character length must be between 1-280'],
-      maxlength: [1000, 'Can not exceed 1000 characters']
+      // maxlength: [1000, 'Can not exceed 1000 characters']
     },
     createdAt: {
       type: Date,
