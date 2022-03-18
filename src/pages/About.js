@@ -1,11 +1,23 @@
 import React from "react";
-import { Container, Row, Col, Image } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 
 const About = () => {
   return (
     <div>
       <Container className="d-flex" fluid>
-        <Row className=" px-4 my-5 p-5 about-header">
+        <div className="px-4 py-5 my-5 text-center">
+          <h1 className="display-5 fw-bold">Heading title</h1>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged.
+          </p>
+        </div>
+        <div></div>
+        {/* <Row className=" px-4 my-5 p-5 about-header">
           <Col>
             <Image
               src="https://img.freepik.com/free-vector/about-us-website-banner-concept-with-thin-line-flat-design_56103-96.jpg"
@@ -30,7 +42,7 @@ const About = () => {
               </p>
             </div>
           </Col>
-        </Row>
+        </Row> */}
       </Container>
     </div>
   );

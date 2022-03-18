@@ -22,10 +22,10 @@ function Navigation() {
               <Nav.Link href="/contact">Contact</Nav.Link>
             </Nav>
             <Nav>
-              <Button href="#logIn" variant="danger">
+              <Button href="/signin" variant="danger">
                 Log in
               </Button>
-              <Button href="#signUp" className="mx-2" variant="primary">
+              <Button href="/signup" className="mx-2" variant="primary">
                 Sign up
               </Button>
             </Nav>

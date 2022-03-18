@@ -12,12 +12,12 @@ code {
     monospace;
 }
 
-/* 404 page  */
+/* NotFound.js  */
 .not-found {
   height: calc(100vh - 56px);
 }
 
-/* About page */
+/* About.js */
 .about-header {
   padding-right: 40%;
 }
@@ -25,4 +25,9 @@ code {
 .about-image {
   margin-right: 20%;
   display: flex;
+}
+
+/* callingCard.js */
+.card__space {
+  margin-bottom: 30px;
 }

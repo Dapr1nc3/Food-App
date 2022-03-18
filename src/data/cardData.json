@@ -1,0 +1,17 @@
+[
+  {
+    "title": "This is the card title",
+    "cardText": "this is the text for the card",
+    "btn": "Click here"
+  },
+  {
+    "title": "This is the card title",
+    "cardText": "this is the text for the card",
+    "btn": "Click here"
+  },
+  {
+    "title": "This is the card title",
+    "cardText": "this is the text for the card",
+    "btn": "Click here"
+  }
+]
