@@ -31,3 +31,8 @@ code {
 .card__space {
   margin-bottom: 30px;
 }
+
+/* Home.js */
+.card-spacing {
+  margin: 1.5%;
+}

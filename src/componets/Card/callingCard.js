@@ -11,33 +11,33 @@ const CallingCard = () => {
           <Col>
             {cardData.map((d, i) => (
               <CardGroup className="card__space">
-                <Card>
+                <Card className="card-spacing">
                   <Card.Img variant="top" src={cake} />
                   <Card.Body>
-                    <Card.Title>{d.title}</Card.Title>
-                    <Card.Text>{d.cardText}</Card.Text>
+                    <Card.Title className="text-center">{d.title}</Card.Title>
+                    <Card.Text className="text-center">{d.cardText}</Card.Text>
                   </Card.Body>
-                  <Card.Footer>
+                  <Card.Footer className="text-center">
                     <Button variant="primary">{d.btn}</Button>
                   </Card.Footer>
                 </Card>
-                <Card>
+                <Card className="card-spacing">
                   <Card.Img variant="top" src={cake} />
                   <Card.Body>
-                    <Card.Title>{d.title}</Card.Title>
-                    <Card.Text>{d.cardText}</Card.Text>
+                    <Card.Title className="text-center">{d.title}</Card.Title>
+                    <Card.Text className="text-center">{d.cardText}</Card.Text>
                   </Card.Body>
-                  <Card.Footer>
+                  <Card.Footer className="text-center">
                     <Button variant="primary">{d.btn}</Button>
                   </Card.Footer>
                 </Card>
-                <Card>
+                <Card className="card-spacing">
                   <Card.Img variant="top" src={cake} />
                   <Card.Body>
-                    <Card.Title>{d.title}</Card.Title>
-                    <Card.Text>{d.cardText}</Card.Text>
+                    <Card.Title className="text-center">{d.title}</Card.Title>
+                    <Card.Text className="text-center">{d.cardText}</Card.Text>
                   </Card.Body>
-                  <Card.Footer>
+                  <Card.Footer className="text-center">
                     <Button variant="primary">{d.btn}</Button>
                   </Card.Footer>
                 </Card>
