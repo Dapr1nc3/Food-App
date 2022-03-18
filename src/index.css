@@ -41,3 +41,13 @@ code {
 .image-border {
   border-radius: 10px 10px 10px 10px !important;
 }
+
+.grow {
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.grow:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}

@@ -22,9 +22,7 @@ function Navigation() {
               <Nav.Link href="/contact">Contact</Nav.Link>
             </Nav>
             <Nav>
-              <Button href="/signin" variant="danger">
-                Log in
-              </Button>
+              <Nav.Link href="/signin">Log in</Nav.Link>
               <Button href="/signup" className="mx-2" variant="primary">
                 Sign up
               </Button>
