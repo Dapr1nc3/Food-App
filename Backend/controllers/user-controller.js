@@ -60,7 +60,7 @@ module.exports = {
       })
       .catch((err) => res.status(400).json(err));
   },
-  // delete user
+  // delete user: FIXME: deleting user does not delete recipe's created by user from database.
   deleteUser({ params }, res) {
     User.findOneAndDelete({ _id: params.id })
       .then((dbUserData) => {
