@@ -10,34 +10,34 @@ const CallingCard = () => {
         <Row className="px-4 my-5 p-2">
           <Col>
             {cardData.map((d, i) => (
-              <CardGroup className="card__space">
-                <Card>
-                  <Card.Img variant="top" src={cake} />
+              <CardGroup className="card__space card-spacing">
+                <Card className="card-spacing">
+                  <Card.Img variant="top" src={cake} className="image-border" />
                   <Card.Body>
-                    <Card.Title>{d.title}</Card.Title>
-                    <Card.Text>{d.cardText}</Card.Text>
+                    <Card.Title className="text-center">{d.title}</Card.Title>
+                    <Card.Text className="text-center">{d.cardText}</Card.Text>
                   </Card.Body>
-                  <Card.Footer>
+                  <Card.Footer className="text-center">
                     <Button variant="primary">{d.btn}</Button>
                   </Card.Footer>
                 </Card>
-                <Card>
-                  <Card.Img variant="top" src={cake} />
+                <Card className="card-spacing">
+                  <Card.Img variant="top" src={cake} className="image-border"/>
                   <Card.Body>
-                    <Card.Title>{d.title}</Card.Title>
-                    <Card.Text>{d.cardText}</Card.Text>
+                    <Card.Title className="text-center">{d.title}</Card.Title>
+                    <Card.Text className="text-center">{d.cardText}</Card.Text>
                   </Card.Body>
-                  <Card.Footer>
+                  <Card.Footer className="text-center">
                     <Button variant="primary">{d.btn}</Button>
                   </Card.Footer>
                 </Card>
-                <Card>
-                  <Card.Img variant="top" src={cake} />
+                <Card className="card-spacing">
+                  <Card.Img variant="top" src={cake} className="image-border" />
                   <Card.Body>
-                    <Card.Title>{d.title}</Card.Title>
-                    <Card.Text>{d.cardText}</Card.Text>
+                    <Card.Title className="text-center">{d.title}</Card.Title>
+                    <Card.Text className="text-center">{d.cardText}</Card.Text>
                   </Card.Body>
-                  <Card.Footer>
+                  <Card.Footer className="text-center">
                     <Button variant="primary">{d.btn}</Button>
                   </Card.Footer>
                 </Card>
