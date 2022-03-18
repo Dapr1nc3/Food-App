@@ -10,9 +10,9 @@ const CallingCard = () => {
         <Row className="px-4 my-5 p-2">
           <Col>
             {cardData.map((d, i) => (
-              <CardGroup className="card__space">
-                <Card className="card-spacing" rounded-3>
-                  <Card.Img variant="top" src={cake} rounded-3 />
+              <CardGroup className="card__space card-spacing">
+                <Card className="card-spacing">
+                  <Card.Img variant="top" src={cake} className="image-border" />
                   <Card.Body>
                     <Card.Title className="text-center">{d.title}</Card.Title>
                     <Card.Text className="text-center">{d.cardText}</Card.Text>
@@ -21,8 +21,8 @@ const CallingCard = () => {
                     <Button variant="primary">{d.btn}</Button>
                   </Card.Footer>
                 </Card>
-                <Card className="card-spacing" rounded-3>
-                  <Card.Img variant="top" src={cake} rounded-3 />
+                <Card className="card-spacing">
+                  <Card.Img variant="top" src={cake} className="image-border" />
                   <Card.Body>
                     <Card.Title className="text-center">{d.title}</Card.Title>
                     <Card.Text className="text-center">{d.cardText}</Card.Text>
@@ -31,8 +31,8 @@ const CallingCard = () => {
                     <Button variant="primary">{d.btn}</Button>
                   </Card.Footer>
                 </Card>
-                <Card className="card-spacing" rounded-3>
-                  <Card.Img variant="top" src={cake} rounded-3 />
+                <Card className="card-spacing">
+                  <Card.Img variant="top" src={cake} className="image-border" />
                   <Card.Body>
                     <Card.Title className="text-center">{d.title}</Card.Title>
                     <Card.Text className="text-center">{d.cardText}</Card.Text>

@@ -35,4 +35,9 @@ code {
 /* Home.js */
 .card-spacing {
   margin: 1.5%;
+  border-radius: 10px 10px 10px 10px !important;
+}
+
+.image-border {
+  border-radius: 10px 10px 10px 10px !important;
 }
