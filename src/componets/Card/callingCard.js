@@ -11,7 +11,7 @@ const CallingCard = () => {
           <Col>
             {cardData.map((d, i) => (
               <CardGroup className="card__space card-spacing">
-                <Card className="card-spacing">
+                <Card className="card-spacing grow" >
                   <Card.Img variant="top" src={cake} className="image-border" />
                   <Card.Body>
                     <Card.Title className="text-center">{d.title}</Card.Title>
@@ -21,7 +21,7 @@ const CallingCard = () => {
                     <Button variant="primary">{d.btn}</Button>
                   </Card.Footer>
                 </Card>
-                <Card className="card-spacing">
+                <Card className="card-spacing grow">
                   <Card.Img variant="top" src={cake} className="image-border"/>
                   <Card.Body>
                     <Card.Title className="text-center">{d.title}</Card.Title>
@@ -31,7 +31,7 @@ const CallingCard = () => {
                     <Button variant="primary">{d.btn}</Button>
                   </Card.Footer>
                 </Card>
-                <Card className="card-spacing">
+                <Card className="card-spacing grow">
                   <Card.Img variant="top" src={cake} className="image-border" />
                   <Card.Body>
                     <Card.Title className="text-center">{d.title}</Card.Title>

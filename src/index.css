@@ -29,15 +29,27 @@ code {
 
 /* callingCard.js */
 .card__space {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 /* Home.js */
 .card-spacing {
-  margin: 1.5%;
+  margin: 2%;
   border-radius: 10px 10px 10px 10px !important;
+  
 }
 
 .image-border {
   border-radius: 10px 10px 10px 10px !important;
 }
+
+.grow:hover { 
+  transform: scale(1.1); 
+  cursor: pointer;
+}
+
+.grow { 
+  transition: all .2s ease-in-out; 
+}
+
+/* Work on the spacing when growing on mobile devices */
