@@ -26,12 +26,12 @@ db.once('open', async () => {
     const recipeText = faker.lorem.words(Math.round(Math.random() * 20) + 1);
 
     const randomUserIndex = Math.floor(Math.random() * createdUsers.ops.length);
-    const { username, _id: userId } = createdUsers.ops[randomUserIndex];
+    const { username, _id: id } = createdUsers.ops[randomUserIndex];
 
     const createdRecipe = await Recipe.create({ recipeText, username });
 
     const updatedUser = await User.updateOne(
-      { _id: userId },
+      { _id: id },
       { $push: { savedRecipes: createdRecipe } }
     );
     // console.log(updatedUser);

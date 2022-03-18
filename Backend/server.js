@@ -33,7 +33,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // FIXME: might need this to change if the public file cant be in the Frontend folder for the app to open
 app.use(express.static('../Frontend/public'));
-// app.use(require('./routes'));
+app.use(require('./routes'));
 
 // Make sure MongoDB running by opening Gitbash and running 'mongod'
 // FIXME: if using mac keep 127.0.0.1:27017, if using windows change to localhost. Or we create a dotenv file and set our preference

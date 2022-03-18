@@ -1,4 +1,4 @@
-const { Schema, model } = require('mongoose');
+const { Schema, model, Types } = require('mongoose');
 const dateFormat = require('../utils/dateFormat');
 
 // TODO: go over recipeSchema (might need to adjust the model to have an id, etc.)
@@ -19,7 +19,7 @@ const RecipeSchema = new Schema(
       type: String,
       required: "Please input your recipe",
       minlength: [1, 'Character length must be between 1-280'],
-      // maxlength: [1000, 'Can not exceed 1000 characters']
+      maxlength: [1000, 'Can not exceed 1000 characters']
     },
     createdAt: {
       type: Date,

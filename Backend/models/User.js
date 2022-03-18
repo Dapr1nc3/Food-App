@@ -1,4 +1,4 @@
-const { Schema, model } = require('mongoose');
+const { Schema, model, Types } = require('mongoose');
 const bcrypt = require('bcrypt');
 
 // import schema from recipe.js
@@ -51,7 +51,7 @@ userSchema.methods.isCorrectPassword = async function (password) {
 
 // when we query a user, we'll also get another field called `recipeCount` with the number of saved recipes we have
 userSchema.virtual('recipeCount').get(function () {
-  return this.savedBooks.length;
+  return this.savedRecipes.length;
 });
 
 const User = model('User', userSchema);
