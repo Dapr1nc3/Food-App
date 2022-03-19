@@ -32,7 +32,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // FIXME: might need this to change if the public file cant be in the Frontend folder for the app to open
-app.use(express.static('../Frontend/public'));
+app.use(express.static('.././Frontend/public'));
 app.use(require('./routes'));
 
 // Make sure MongoDB running by opening Gitbash and running 'mongod'
