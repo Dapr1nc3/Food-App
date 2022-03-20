@@ -59,3 +59,12 @@ code {
 .site-logo {
   height: 40px;
 }
+
+/* Profile picture styling */
+.profile-picture {
+  border-radius: 50%;
+}
+
+.profile-btn {
+  margin-right: 50px;
+}

@@ -5,8 +5,8 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
-import SignUp from "./pages/SignUp";
 import SignIn from "./pages/logIn";
+import SignUp from "./pages/SignUp";
 
 function App() {
   return (
