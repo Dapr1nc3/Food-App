@@ -1,37 +1,52 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "bootstrap/dist/css/bootstrap.css";
+import Navigation from "./componets/Navbar/Navagation";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import React, { Component } from "react";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import NotFound from "./pages/NotFound";
+import SignUp from "./pages/SignUp";
+import SignIn from "./pages/logIn";
 
 class App extends Component {
-state = {
-    data: null
+  state = {
+    data: null,
   };
 
   componentDidMount() {
     this.callBackendAPI()
-      .then(res => this.setState({ data: res.express }))
-      .catch(err => console.log(err));
+      .then((res) => this.setState({ data: res.express }))
+      .catch((err) => console.log(err));
   }
-    // fetching the GET route from the Express server which matches the GET route from server.js
+  // fetching the GET route from the Express server which matches the GET route from server.js
   callBackendAPI = async () => {
-    const response = await fetch('/express_backend');
+    const response = await fetch("/express_backend");
     const body = await response.json();
 
     if (response.status !== 200) {
-      throw Error(body.message) 
+      throw Error(body.message);
     }
     return body;
   };
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Recipe App</h1>
-        </header>
-        <p className="App-intro">{this.state.data}</p>
-      </div>
+      <>
+        <div className="App">
+          <Navigation />
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/signin" element={<SignIn />} />
+              <Route path="/signup" element={<SignUp />} />
+              <Route path="/*" element={<NotFound />} />
+            </Routes>
+          </BrowserRouter>
+        </div>
+      </>
     );
   }
 }
