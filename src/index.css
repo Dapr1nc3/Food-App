@@ -53,3 +53,9 @@ code {
 }
 
 /* Work on the spacing when growing on mobile devices */
+
+
+/* Site Logo Styling */
+.site-logo {
+  height: 40px;
+}
