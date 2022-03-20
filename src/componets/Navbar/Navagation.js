@@ -14,7 +14,10 @@ function Navigation() {
       >
         <Container>
           <Navbar.Brand>
-            <img alt="" src={siteLogo} className="site-logo"></img>
+            <Nav.Link href="/">
+              <img alt="" src={siteLogo} className="site-logo"></img>
+            </Nav.Link>
+            
           </Navbar.Brand>
 
           <Navbar.Toggle />
