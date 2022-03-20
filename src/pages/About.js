@@ -1,49 +1,74 @@
 import React from "react";
 import { Container } from "react-bootstrap";
+import aboutImg from "../assets/images/about-placeholder.gif"
+
 
 const About = () => {
   return (
     <div>
-      <Container className="d-flex" fluid>
-        <div className="px-4 py-5 my-5 text-center">
-          <h1 className="display-5 fw-bold">Heading title</h1>
+      <Container className="my-auto my-auto" fluid>
+        <div className="">
+          <h1 className="text-center">About Us</h1>
+        </div>
+
+        
+      </Container>
+      
+      {/* Containers for About Us */}
+      <Container>
+        {/* Devin's About Me */}
+        <h2 className="text-center">Devin The OG</h2>
+        <div className="card-group">
+          <div className="card bg-warning">
+            <img alt="" src={aboutImg}></img>
+          </div>
+        <div className="card bg-success">
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged.
+            Insert Info Here
           </p>
         </div>
-        <div></div>
-        {/* <Row className=" px-4 my-5 p-5 about-header">
-          <Col>
-            <Image
-              src="https://img.freepik.com/free-vector/about-us-website-banner-concept-with-thin-line-flat-design_56103-96.jpg"
-              fluid
-              rounded
-            />
-          </Col>
-          <Col className="text-dark about-image">
-            <div className="">
-              <h1>This is what we do!</h1>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of
-                Lorem Ipsum.
-              </p>
-            </div>
-          </Col>
-        </Row> */}
+        </div>
+
+        {/* Alex's About Me */}
+        <h2 className="text-center">Alex The Backend OG</h2>
+        <div className="card-group">
+          <div className="card bg-warning">
+            <p>
+              Insert Info About Alex
+            </p>
+          </div>
+        <div className="card bg-success">
+          <img alt="" src={aboutImg}></img>
+        </div>
+        </div>
+
+        {/* Bryan's About Me */}
+        <h2 className="text-center">Bryan The OG Backend</h2>
+        <div className="card-group">
+          <div className="card bg-warning">
+          <img alt="" src={aboutImg}></img>
+          </div>
+        <div className="card bg-success">
+          <p>
+            Place Bryan's info here!
+          </p>
+        </div>
+        </div>
+
+        {/* Luis' About Me */}
+        <h2 className="text-center">Luis the I'm also here</h2>
+        <div className="card-group">
+          <div className="card bg-warning">
+            <p>
+              This is Devin and his awesome coding skills
+            </p>
+          </div>
+        <div className="card bg-success">
+          <img alt="" src={aboutImg}></img>
+        </div>
+        </div>
       </Container>
+      
     </div>
   );
 };
