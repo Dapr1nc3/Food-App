@@ -1,5 +1,6 @@
 import "bootstrap/dist/css/bootstrap.css";
 import { Container, Nav, Navbar, Button } from "react-bootstrap";
+import siteLogo from "../../assets/images/logo.png";
 
 function Navigation() {
   return (
@@ -12,7 +13,11 @@ function Navigation() {
         collapseOnSelect
       >
         <Container>
-          <Navbar.Brand>Logo</Navbar.Brand>
+          <Navbar.Brand>
+            <Nav.Link href="/">
+              <img alt="" src={siteLogo} className="site-logo"></img>
+            </Nav.Link>
+          </Navbar.Brand>
 
           <Navbar.Toggle />
           <Navbar.Collapse>

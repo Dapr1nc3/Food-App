@@ -32,6 +32,11 @@ code {
   margin-bottom: 30px;
 }
 
+/* Navagation.js */
+.nav__bgColor {
+  background-color: rgb(17, 190, 190);
+}
+
 /* Home.js */
 .card-spacing {
   margin: 1.5%;
@@ -50,4 +55,15 @@ code {
 .grow:hover {
   transform: scale(1.1);
   cursor: pointer;
+}
+
+/* Site logo */
+.site-logo {
+  height: 40px;
+}
+
+/* SlideShow.js */
+.img__carousel {
+  max-height: 500px;
+  width: 100%;
 }

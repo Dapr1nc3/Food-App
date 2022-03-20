@@ -7,7 +7,7 @@ const CallingCard = () => {
   return (
     <div>
       <Container className="d-flex" fluid>
-        <Row className="px-4 my-5 p-2">
+        <Row className="px-1 my-1 p-1">
           <Col>
             {cardData.map((d, i) => (
               <CardGroup className="card__space card-spacing">
