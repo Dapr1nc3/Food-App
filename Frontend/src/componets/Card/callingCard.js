@@ -10,7 +10,7 @@ const CallingCard = () => {
         <Row className="px-1 my-1 p-1">
           <Col>
             {cardData.map((d, i) => (
-              <CardGroup className="card__space card-spacing">
+              <CardGroup className="card__space card-spacing" key={i}>
                 <Card className="card-spacing grow">
                   <Card.Img variant="top" src={cake} className="image-border" />
                   <Card.Body>
