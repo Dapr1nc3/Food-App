@@ -9,28 +9,26 @@ import NotFound from "./pages/NotFound";
 import SignUp from "./pages/SignUp";
 import SignIn from "./pages/logIn";
 
-class App extends Component {
-  state = {
-    data: null,
-  };
+const App = () => {
+//   const [data, setData] = useState(null);
 
-  componentDidMount() {
-    this.callBackendAPI()
-      .then((res) => this.setState({ data: res.express }))
-      .catch((err) => console.log(err));
-  }
-  // fetching the GET route from the Express server which matches the GET route from server.js
-  callBackendAPI = async () => {
-    const response = await fetch("/express_backend");
-    const body = await response.json();
+//  // fetching the GET route from the Express server which matches the GET route from server.js
+//  const callBackendAPI = async () => {
+//   const response = await fetch("/express_backend");
+//   const body = await response.json();
 
-    if (response.status !== 200) {
-      throw Error(body.message);
-    }
-    return body;
-  };
+//   if (response.status !== 200) {
+//     throw Error(body.message);
+//   }
+//   return body;
+// };
 
-  render() {
+//   useEffect(()=>{
+//     callBackendAPI()
+//     .then((res) => setData({res.express}))
+//     .catch((err) => console.log(err))
+//   }, [])
+ 
     return (
       <>
         <div className="App">
@@ -49,6 +47,6 @@ class App extends Component {
       </>
     );
   }
-}
+
 
 export default App;
