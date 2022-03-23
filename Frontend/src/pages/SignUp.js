@@ -1,27 +1,51 @@
 import React, { useState } from "react";
 import { Container, Form, Button } from "react-bootstrap";
+import Auth from '../utils/auth';
+import { ADD_USER } from '../utils/mutations';
+import { useMutation } from '@apollo/client';
 
 const SignUp = () => {
-  const [formData, setFormData] = useState(null);
+  const [formState, setFormState] = useState({
+    username: '',
+    email: '',
+    password: '',
+  });
+  const [addUser] = useMutation(ADD_USER); 
+  //add login in automatically - useNavigate - react component with useState
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Post formData to API post(backend)
+  // Update state based on form input changes
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+
+    setFormState({
+      ...formState,
+      [name]: value,
+    });
   };
 
-  const handleForm = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+  // Submit form
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+
+    try {
+      const { data } = await addUser({
+        variables: { ...formState },
+      });
+
+      Auth.login(data.addUser.token);
+    } catch (e) {
+      console.error(e);
+    }
   };
-  console.log(formData);
+  
   return (
     <div>
       <Container>
-        <Form onSubmit={handleSubmit}>
+        <Form onSubmit={handleFormSubmit}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Username</Form.Label>
             <Form.Control
-              onChange={handleForm}
+              onChange={handleChange}
               type="text"
               placeholder=""
               name="username"
@@ -32,7 +56,7 @@ const SignUp = () => {
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Email</Form.Label>
             <Form.Control
-              onChange={handleForm}
+              onChange={handleChange}
               type="email"
               placeholder=""
               name="email"
@@ -43,7 +67,7 @@ const SignUp = () => {
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Label>Password</Form.Label>
             <Form.Control
-              onChange={handleForm}
+              onChange={handleChange}
               type="password"
               placeholder=""
               name="password"
