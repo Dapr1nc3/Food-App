@@ -1,44 +1,7 @@
-import React, { useState } from 'react';
-import { useMutation } from '@apollo/client';
-import { LOGIN_USER } from '../utils/mutations';
-import Auth from '../utils/auth';
+import React from "react";
 import { Col, Container, Row, Form, Button } from "react-bootstrap";
 
-const Login = (props) => {
-  const [formState, setFormState] = useState({ email: '', password: '' });
-  const [login] = useMutation(LOGIN_USER);
-
-  // Update state based on form input changes
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-
-    setFormState({
-      ...formState,
-      [name]: value,
-    });
-  };
-
-  // Submit form
-  const handleFormSubmit = async (event) => {
-    event.preventDefault();
-
-    try {
-      const { data } = await login({
-        variables: { ...formState },
-      });
-
-      Auth.login(data.login.token);
-    } catch (e) {
-      console.error(e);
-    }
-
-    // Clear form values
-    setFormState({
-      email: '',
-      password: '',
-    });
-  };
-
+const SignIn = () => {
   return (
     <>
       <Container>
@@ -55,12 +18,10 @@ const Login = (props) => {
             <Form>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
-                <Form.Control type="email" placeholder="Enter email" value={formState.email}
-                onChange={handleChange}/>
+                <Form.Control type="email" placeholder="Enter email" />
               </Form.Group>
 
-              <Form.Group className="mb-3" controlId="formBasicPassword" value={formState.password}
-                onChange={handleChange}>
+              <Form.Group className="mb-3" controlId="formBasicPassword">
                 <Form.Label>Password</Form.Label>
                 <Form.Control type="password" placeholder="Password" />
               </Form.Group>
@@ -68,7 +29,7 @@ const Login = (props) => {
               <Form.Group className="mb-3" controlId="formBasicCheckbox">
                 <Form.Check type="checkbox" label="Remember me" />
               </Form.Group>
-              <Button variant="info" type="submit" onSubmit={handleFormSubmit}>
+              <Button variant="info" type="submit">
                 Login
               </Button>
             </Form>
@@ -82,4 +43,4 @@ const Login = (props) => {
   );
 };
 
-export default Login;
+export default SignIn;

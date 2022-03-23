@@ -1,71 +1,62 @@
-import React, { useState } from 'react';
-import { useMutation } from '@apollo/client';
-import { ADD_USER } from '../utils/mutations';
-import Auth from '../utils/auth';
+import React, { useState } from "react";
 import { Container, Form, Button } from "react-bootstrap";
 
 const SignUp = () => {
-  const [formState, setFormState] = useState({
-    username: '',
-    email: '',
-    password: '',
-  });
-  const [addUser] = useMutation(ADD_USER);
+  const [formData, setFormData] = useState(null);
 
-  // Update state based on form input changes
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-
-    setFormState({
-      ...formState,
-      [name]: value,
-    });
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Post formData to API post(backend)
   };
 
-  // Submit form
-  const handleFormSubmit = async (event) => {
-    event.preventDefault();
-
-    try {
-      const { data } = await addUser({
-        variables: { ...formState },
-      });
-
-      Auth.login(data.addUser.token);
-    } catch (e) {
-      console.error(e);
-    }
+  const handleForm = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
   };
-
+  console.log(formData);
   return (
     <div>
       <Container>
-        <Form>
-          <Form.Group className="mb-3" controlId="formBasicEmail" value={formState.username}
-                onChange={handleChange}>
+        <Form onSubmit={handleSubmit}>
+          <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Username</Form.Label>
-            <Form.Control type="text" placeholder="" required="true" />
+            <Form.Control
+              onChange={handleForm}
+              type="text"
+              placeholder=""
+              name="username"
+              required="true"
+            />
           </Form.Group>
 
-          <Form.Group className="mb-3" controlId="formBasicEmail" value={formState.email}
-                onChange={handleChange}>
+          <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Email</Form.Label>
-            <Form.Control type="email" placeholder="" required="true" />
+            <Form.Control
+              onChange={handleForm}
+              type="email"
+              placeholder=""
+              name="email"
+              required="true"
+            />
           </Form.Group>
 
-          <Form.Group className="mb-3" controlId="formBasicPassword" value={formState.password}
-                onChange={handleChange}>
+          <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Label>Password</Form.Label>
-            <Form.Control type="password" placeholder="" required="true" />
+            <Form.Control
+              onChange={handleForm}
+              type="password"
+              placeholder=""
+              name="password"
+              required="true"
+            />
           </Form.Group>
 
-          <Form.Group className="mb-3" controlId="formBasicPassword" value={formState.password}
-                onChange={handleChange}>
+          <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Label>Confirm Password</Form.Label>
             <Form.Control type="password" placeholder="" required="true" />
           </Form.Group>
 
-          <Button variant="primary" type="submit" onSubmit={handleFormSubmit}>
+          <Button variant="primary" type="submit">
             Submit
           </Button>
         </Form>
