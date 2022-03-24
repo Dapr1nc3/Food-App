@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import aboutImg from "../assets/images/userPlaceholder.png";
+import devinImg from "../assets/images/devin.jpg";
 
 const About = () => {
   return (
@@ -17,10 +18,10 @@ const About = () => {
         <h2 className="text-center">Devin The OG</h2>
         <div className="card-group">
           <div className="card bg-warning">
-            <img alt="" src={aboutImg}></img>
+            <img alt="" src={devinImg}></img>
           </div>
           <div className="card bg-success">
-            <p>Insert Info Here</p>
+            <p></p>
           </div>
         </div>
 
