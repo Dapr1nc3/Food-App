@@ -29,8 +29,10 @@ const SignUp = () => {
 
     try {
       const { data } = await addUser({
-        variables: { ...formState },
-      });
+        variables: { ...formState }, 
+      })
+      alert("User Added Successfully!");
+      ;
 
       Auth.login(data.addUser.token);
     } catch (e) {
@@ -41,15 +43,14 @@ const SignUp = () => {
   return (
     <div>
       <Container>
-        <Form onSubmit={handleFormSubmit}>
+        <Form onSubmit={handleFormSubmit} autocomplete="on">
           <Form.Group className="mb-3" controlId="formBasicUser">
             <Form.Label>Username</Form.Label>
             <Form.Control
               onChange={handleChange}
-              type="text"
+              required type="text"
               placeholder=""
               name="username"
-              required="{true}"
             />
           </Form.Group>
 
@@ -57,10 +58,9 @@ const SignUp = () => {
             <Form.Label>Email</Form.Label>
             <Form.Control
               onChange={handleChange}
-              type="email"
+              required type="email"
               placeholder=""
               name="email"
-              required="true"
             />
           </Form.Group>
 
@@ -68,16 +68,15 @@ const SignUp = () => {
             <Form.Label>Password</Form.Label>
             <Form.Control
               onChange={handleChange}
-              type="password"
+              required type="password"
               placeholder=""
               name="password"
-              required="true"
             />
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formBasicPasswordConfirm">
             <Form.Label>Confirm Password</Form.Label>
-            <Form.Control type="password" placeholder="" required="true" />
+            <Form.Control required type="password" placeholder="" />
           </Form.Group>
 
           <Button variant="primary" type="submit">
