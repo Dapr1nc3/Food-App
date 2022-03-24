@@ -1,15 +1,22 @@
-import React from "react";
+import React, {useRef, useState} from "react";
 import { Container } from "react-bootstrap";
 import SlideShow from "../componets/Carousel/SlideShow";
 import CallingCard from "../componets/Card/callingCard";
-import Search from "../componets/Search/Search";
+import SearchBar from "../componets/SearchBar/SearchBar";
+// import Breakfast from "../assets/images/breakfast.jpeg"
 
 const Home = () => {
+  const [recipes, setRecipes] = useState();
+
   return (
     <Container>
       <SlideShow />
-      <Search />
-      <CallingCard />
+      <SearchBar setRecipes={setRecipes} />
+      {recipes?<CallingCard cardData={recipes} /> : 
+        <>
+          {/* <h1 className="text-center">WELCOME!</h1>
+          <img variant="top" src={Breakfast} className="image-border" /> */}
+        </>}
     </Container>
   );
 };

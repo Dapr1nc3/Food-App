@@ -1,8 +1,8 @@
 const express = require("express");
-const mongoose = require("mongoose");
 const { ApolloServer } = require("apollo-server-express");
 const { typeDefs, resolvers } = require("./schemas");
 const db = require("./config/connection");
+const cors = require('cors');
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -34,6 +34,7 @@ app.use(express.urlencoded({ extended: true }));
 // FIXME: might need this to change if the public file cant be in the Frontend folder for the app to open
 app.use(express.static(".././Frontend/public"));
 app.use(require("./routes"));
+app.use(cors());
 
 
 db.once("open", () => {
