@@ -26,13 +26,21 @@ const SignUp = () => {
   // Submit form
   const handleFormSubmit = async (event) => {
     event.preventDefault();
+    // fetch post call to api/user/ to add the user - axios npm package
+    // specify post method, set headers to application/content json
+    // return.then response
+    // that route will check backend routes, should post the user with create user
+    // then do an if statement, check that confirmed password equals password before submit - conditional
+    // console.log
+    
 
     try {
+      
       const { data } = await addUser({
         variables: { ...formState }, 
-      })
-      alert("User Added Successfully!");
-      ;
+      });
+
+      // call addUser
 
       Auth.login(data.addUser.token);
     } catch (e) {
