@@ -42,14 +42,14 @@ const SignUp = () => {
     <div>
       <Container>
         <Form onSubmit={handleFormSubmit}>
-          <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Group className="mb-3" controlId="formBasicUser">
             <Form.Label>Username</Form.Label>
             <Form.Control
               onChange={handleChange}
               type="text"
               placeholder=""
               name="username"
-              required="true"
+              required="{true}"
             />
           </Form.Group>
 
@@ -75,7 +75,7 @@ const SignUp = () => {
             />
           </Form.Group>
 
-          <Form.Group className="mb-3" controlId="formBasicPassword">
+          <Form.Group className="mb-3" controlId="formBasicPasswordConfirm">
             <Form.Label>Confirm Password</Form.Label>
             <Form.Control type="password" placeholder="" required="true" />
           </Form.Group>
