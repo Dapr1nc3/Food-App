@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
 import { Form, Button } from "react-bootstrap";
-import axios from "axios";
 
 
 const SearchBar = ({setRecipes}) => {
@@ -16,13 +15,12 @@ const SearchBar = ({setRecipes}) => {
     var apiKey = process.env.REACT_APP_MY_API_KEY;
     var apiUrl = `https://api.spoonacular.com/recipes/complexSearch?query=${userInput}&number=9&instructionsRequired=true&addRecipeInformation=true&sort=random&apiKey=${apiKey}`;
 
-    // fetch(apiUrl, {
-    //   method: "GET",
-    //   headers: { "Content-Type": "application/json"
-    //   // ,"Access-Control-Allow-Origin": true
-    //  },
-    axios.get(apiUrl)
-    .then((response) => {
+    fetch(apiUrl, {
+      method: "GET",
+      headers: { "Content-Type": "application/json"
+      // ,"Access-Control-Allow-Origin": true
+     },
+    }).then((response) => {
       if (response.ok) {
         // console.log(response.json())
         return response.json()}
