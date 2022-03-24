@@ -3,7 +3,7 @@ import { Container, Button } from "react-bootstrap";
 import userPlaceholder from "../assets/images/userPlaceholder.png";
 import useLocalStorage from "../componets/localStorage/useLocalStorage";
 
-const Contact = () => {
+const Profile = () => {
   let [value, setValue] = useLocalStorage("name", "");
 
   return (
@@ -48,4 +48,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Profile;

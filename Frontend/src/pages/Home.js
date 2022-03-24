@@ -3,6 +3,7 @@ import { Container } from "react-bootstrap";
 import SlideShow from "../componets/Carousel/SlideShow";
 import CallingCard from "../componets/Card/callingCard";
 import Search from "../componets/Search/Search";
+import BottomPage from "../componets/Footer/BottomPage";
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <SlideShow />
       <Search />
       <CallingCard />
+      <BottomPage />
     </Container>
   );
 };
