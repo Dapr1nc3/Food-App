@@ -10,39 +10,40 @@ const CallingCard = ({cardData}) => {
         <Row className="px-1 my-1 p-1">
           <Col>
             {cardData?.map((d) => (
-              // <CardGroup className="card__space card-spacing" key={i}>
+              <CardGroup className="card__space card-spacing" key={""}>
               <Card className="card-spacing grow" key={d.id}>
                   <Card.Img variant="top" src={d.image} className="image-border" />
                   <Card.Body>
                     <Card.Title className="text-center">{d.title}</Card.Title>
-                    <Card.Text className="text-center">{d.summary}</Card.Text>
+                    {/* <iframe src={d.summary}></iframe> */}
+                    <Card.Text className="text-center"><div dangerouslySetInnerHTML={{__html: d.summary}}></div></Card.Text>
                   </Card.Body>
                   <Card.Footer className="text-center">
                     <Button onClick={()=>{window.location.href=d.sourceUrl}} variant="primary">Click Here</Button>
                   </Card.Footer>
                 </Card>
-            ))}
-                {/* <Card className="card-spacing grow">
-                  <Card.Img variant="top" src={cake} className="image-border" />
+            {/* ))} */}
+                <Card className="card-spacing grow">
+                  <Card.Img variant="top" src={d.image} className="image-border" />
                   <Card.Body>
                     <Card.Title className="text-center">{d.title}</Card.Title>
-                    <Card.Text className="text-center">{d.cardText}</Card.Text>
+                    <Card.Text className="text-center"><div dangerouslySetInnerHTML={{__html: d.summary}}></div></Card.Text>
                   </Card.Body>
                   <Card.Footer className="text-center">
-                    <Button variant="primary">{d.btn}</Button>
+                    <Button onClick={()=>{window.location.href=d.sourceUrl}} variant="primary">Click Here</Button>
                   </Card.Footer>
                 </Card>
                 <Card className="card-spacing grow">
-                  <Card.Img variant="top" src={cake} className="image-border" />
+                  <Card.Img variant="top" src={d.image} className="image-border" />
                   <Card.Body>
                     <Card.Title className="text-center">{d.title}</Card.Title>
-                    <Card.Text className="text-center">{d.cardText}</Card.Text>
+                    <Card.Text className="text-center"><div dangerouslySetInnerHTML={{__html: d.summary}}></div></Card.Text>
                   </Card.Body>
                   <Card.Footer className="text-center">
-                    <Button variant="primary">{d.btn}</Button>
+                    <Button onClick={()=>{window.location.href=d.sourceUrl}} variant="primary">Click Here</Button>
                   </Card.Footer>
                 </Card>
-              </CardGroup> */}
+              </CardGroup>))}
           </Col>
         </Row>
       </Container>
