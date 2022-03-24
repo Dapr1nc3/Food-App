@@ -1,27 +1,21 @@
 import React, { useRef, useState } from "react";
 import { Form, Button } from "react-bootstrap";
 
+
 const SearchBar = ({setRecipes}) => {
   const searchInput = useRef(null);
-
-
-  // console.log(searchInput.current.value);
 
   const runSearch = (e) => {
     e.preventDefault();
     console.log(searchInput.current.value);
+    // console.log(process.env);
 
     const userInput = searchInput.current.value;
 
-    var API_Key = "baee51bfa3ab4d96aad7b37ff18176a4";
-    var apiUrl = `https://api.spoonacular.com/recipes/complexSearch?query=${userInput}&number=9&instructionsRequired=true&addRecipeInformation=true&sort=popularity&apiKey=${API_Key}`;
+    var apiKey = process.env.REACT_APP_MY_API_KEY;
+    var apiUrl = `https://api.spoonacular.com/recipes/complexSearch?query=${userInput}&number=9&instructionsRequired=true&addRecipeInformation=true&sort=popularity&apiKey=${apiKey}`;
 
-    // fetch(`/api/spoonacular/?query=${userInput}`, {
-    //   method: "GET",
-    //   headers: { "Content-Type": "application/json"
-    //   // ,"Access-Control-Allow-Origin": true
-    //  },
-     fetch(apiUrl, {
+    fetch(apiUrl, {
       method: "GET",
       headers: { "Content-Type": "application/json"
       // ,"Access-Control-Allow-Origin": true
@@ -29,8 +23,6 @@ const SearchBar = ({setRecipes}) => {
     }).then((response) => {
       if (response.ok) {
         // console.log(response.json())
-        // response.json().then(function (data) {
-        //   console.log(data);
         return response.json()}
     }).then((res) => {setRecipes(res.results)})
     .catch(err=> console.log(err))

@@ -11,7 +11,7 @@ const CallingCard = ({cardData}) => {
           <Col>
             {cardData?.map((d) => (
               // <CardGroup className="card__space card-spacing" key={i}>
-                <Card className="card-spacing grow" key={d.id}>
+              <Card className="card-spacing grow" key={d.id}>
                   <Card.Img variant="top" src={d.image} className="image-border" />
                   <Card.Body>
                     <Card.Title className="text-center">{d.title}</Card.Title>
