@@ -28,8 +28,22 @@ code {
 }
 
 /* callingCard.js */
+.container-spacing{
+  margin-top: 25px;
+}
 .card__space {
   margin-bottom: 30px;
+}
+
+.scrollable{
+  overflow-y: auto;
+  max-height: 300px;
+}
+
+.card-box{
+  width:600px;
+  height: auto;
+  /* margin: 30px auto; */
 }
 
 /* Navagation.js */

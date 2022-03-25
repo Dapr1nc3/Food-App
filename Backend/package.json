@@ -7,7 +7,8 @@
   "scripts": {
     "start": "node server.js",
     "watch": "nodemon",
-    "seed": "node seeders/seeds.js"
+    "seed": "node seeders/seeds.js",
+    "develop": "concurrently \"npm run watch\" \"cd ../Frontend && npm start\""
   },
   "engines": {
     "node": ">=12.0.0 <17.5.0"
@@ -19,16 +20,19 @@
     "@apollo/client": "^3.5.10",
     "apollo-server-express": "^3.6.4",
     "bcrypt": "^5.0.1",
+    "dotenv": "^16.0.0",
     "express": "^4.17.1",
     "faker": "^4.1.0",
     "graphql": "^16.3.0",
     "jsonwebtoken": "^8.5.1",
     "moment": "^2.29.1",
     "mongoose": "^5.9.7",
-    "node": "^17.7.1",
+    "needle": "^3.0.0",
+    "node": "^16.14.0",
     "react-router-dom": "^5.3.0"
   },
   "devDependencies": {
+    "concurrently": "^7.0.0",
     "nodemon": "^2.0.15"
   }
 }
