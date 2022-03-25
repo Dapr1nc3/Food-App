@@ -23,7 +23,8 @@ const SearchBar = ({setRecipes}) => {
     }).then((response) => {
       if (response.ok) {
         // console.log(response.json())
-        return response.json()}
+        return response.json()
+      }
     })
     .then((res) => {setRecipes(res.results)})
     .catch(err=> console.log(err))
