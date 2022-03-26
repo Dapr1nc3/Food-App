@@ -5,9 +5,9 @@ import siteLogo from "../../assets/images/logo.png"
 function Navigation() {
   return (
     <div className="App">
-      <Navbar
-        bg="dark"
-        variant="dark"
+      <Navbar className="nav-bar"
+        // bg="dark"
+        // variant="dark"
         sticky="top"
         expand="sm"
         collapseOnSelect
@@ -23,9 +23,9 @@ function Navigation() {
           <Navbar.Toggle />
           <Navbar.Collapse>
             <Nav className="me-auto">
-              <Nav.Link href="/">Home</Nav.Link>
-              <Nav.Link href="/about">About</Nav.Link>
-              <Nav.Link href="/contact">Profile</Nav.Link>
+              <Nav.Link href="/" className="navbar-link">Home</Nav.Link>
+              <Nav.Link href="/about" className="navbar-link">About</Nav.Link>
+              <Nav.Link href="/contact" className="navbar-link">Profile</Nav.Link>
             </Nav>
             <Nav>
               <Button href="/signin" variant="danger">

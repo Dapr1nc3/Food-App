@@ -31,7 +31,6 @@ const Contact = () => {
             <Button className='card profile-btn'>Favorite Recipes</Button>
             <Button className=' card profile-btn'>My Recipes</Button>
           </div>
-          
         </div>
       </Container>
       
