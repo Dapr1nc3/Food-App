@@ -50,20 +50,20 @@ ul li {
 
 
 /* callingCard.js */
-.container-spacing{
+.container-spacing {
   margin-top: 25px;
 }
 .card__space {
   margin-bottom: 10px;
 }
 
-.scrollable{
+.scrollable {
   overflow-y: auto;
   max-height: 300px;
 }
 
-.card-box{
-  width:600px;
+.card-box {
+  width: 600px;
   height: auto;
   /* margin: 30px auto; */
 }
@@ -141,4 +141,9 @@ ul li {
   max-height: 500px;
   width: 100%;
 }
+<<<<<<< HEAD
 >>>>>>> workspace-Devin:Frontend/src/index.css
+=======
+
+/* Profile.js */
+>>>>>>> workspace-Devin

@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import aboutImg from "../assets/images/userPlaceholder.png";
-import devinImg from "../assets/images/devin.jpg";
+import devinImg from "../assets/images/Devin-pic.jpg";
 
 const About = () => {
   return (
