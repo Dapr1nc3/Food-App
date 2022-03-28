@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Form, Button, Alert } from 'react-bootstrap';
-
 import { useMutation } from '@apollo/client';
-
 import { ADD_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
 
@@ -19,7 +17,7 @@ const SignupForm = () => {
   // set state for alert
   const [showAlert, setShowAlert] = useState(false);
 
-  const [addUser, { error, data }] = useMutation(ADD_USER);
+  const [addUser, { error}] = useMutation(ADD_USER);
 
   useEffect(() => {
     if (error) {
@@ -63,6 +61,49 @@ const SignupForm = () => {
       email: '',
       password: '',
     });
+
+
+    fetch("/auth/signup", {
+      method: "POST",
+      credentials: "include",
+      mode: "cors",
+      body: JSON.stringify({
+         password: this.state.password,
+         username: this.state.username
+      }),
+      headers: new Headers({
+         "Content-Type": "application/json"
+      })
+   })
+   .then(response => {
+      if (!response.ok) {
+         response.text().then((body) => {
+            this.setState({
+               errorRequest: body + " Please enter different username."
+            })
+         })
+         return;
+      }
+      this.props.login().then( () => {
+         this.props.history.push('/profile')
+      })
+   })
+   .catch(err => console.log(err));
+
+   this.setState({
+      username: "",
+      email: "",
+      password: "",
+      passwordConfirm: "",
+      
+   });
+
+
+
+
+
+
+
   };
 
   return (
