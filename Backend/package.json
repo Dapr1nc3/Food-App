@@ -18,6 +18,7 @@
   "dependencies": {
     "@apollo/client": "^3.5.10",
     "apollo-server-express": "^3.6.4",
+    "axios": "^0.26.1",
     "bcrypt": "^5.0.1",
     "express": "^4.17.3",
     "faker": "^4.1.0",
