@@ -67,4 +67,8 @@ const recipeController = {
   },
 };
 
+<<<<<<< HEAD
 module.exports = recipeController;
+=======
+module.exports = recipeController;
+>>>>>>> workspace-BrianD

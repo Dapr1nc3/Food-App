@@ -56,4 +56,8 @@ userSchema.virtual('recipeCount').get(function () {
 
 const User = model('User', userSchema);
 
+<<<<<<< HEAD
 module.exports = User;
+=======
+module.exports = User;
+>>>>>>> workspace-BrianD

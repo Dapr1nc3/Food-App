@@ -10,20 +10,38 @@ type User {
     recipeCount: Int
     savedRecipe: [Recipe]
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> workspace-BrianD
 type Recipe {
     _id: ID
     recipeText: String
     createdAt: String
     username: String
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> workspace-BrianD
 type Query {
     users: [User]
     user(username: String!): User
     recipes(username: String): [Recipe]
     recipe(_id: ID!): Recipe
+<<<<<<< HEAD
 }`;
+=======
+}
+type Mutation {
+    login(email: String!, password: String!): Auth
+    addUser(username: String!, email: String!, password: String!): Auth
+  }
+  type Auth {
+    token: ID!
+    user: User
+  }  `;
+>>>>>>> workspace-BrianD
 
 // export the typeDefs
 module.exports = typeDefs;

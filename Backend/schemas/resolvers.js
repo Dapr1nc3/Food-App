@@ -1,4 +1,9 @@
 const { User, Recipe } = require('../models');
+<<<<<<< HEAD
+=======
+const { AuthenticationError } = require('apollo-server-express');
+const { signToken } = require('../utils/auth');
+>>>>>>> workspace-BrianD
 
 const resolvers = {
     Query: {
@@ -21,6 +26,33 @@ users: async () => {
       .select('-__v -password')
       .populate('savedRecipes');
   },
+<<<<<<< HEAD
+=======
+    },
+    Mutation: {
+      addUser: async (parent, args) => {
+        const user = await User.create(args);
+        const token = signToken(user);
+      
+        return { token, user };
+      },
+      login: async (parent, { email, password }) => {
+        const user = await User.findOne({ email });
+      
+        if (!user) {
+          throw new AuthenticationError('Incorrect credentials');
+        }
+      
+        const correctPw = await user.isCorrectPassword(password);
+      
+        if (!correctPw) {
+          throw new AuthenticationError('Incorrect credentials');
+        }
+      
+        const token = signToken(user);
+        return { token, user };
+      }
+>>>>>>> workspace-BrianD
     }
   };
   

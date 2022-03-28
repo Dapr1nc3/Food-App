@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, {useRef, useState} from "react";
 import { Container } from "react-bootstrap";
 import SlideShow from "../componets/Carousel/SlideShow";
@@ -20,8 +21,26 @@ const Home = () => {
           <img variant="top" src={Breakfast} className="image-border" /> */}
         </>}
       <BottomPage />
+=======
+import React from "react";
+import { Container } from "react-bootstrap";
+import SlideShow from "../components/Carousel/SlideShow";
+import CallingCard from "../components/Card/callingCard";
+import Search from "../components/Search/Search";
+
+const Home = () => {
+  return (
+    <Container>
+      <SlideShow />
+      <Search />
+      <CallingCard />
+>>>>>>> workspace-BrianD
     </Container>
   );
 };
 
+<<<<<<< HEAD
 export default Home;
+=======
+export default Home;
+>>>>>>> workspace-BrianD

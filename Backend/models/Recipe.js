@@ -39,4 +39,8 @@ const RecipeSchema = new Schema(
 
 const Recipe = model('Recipe', RecipeSchema);
 
+<<<<<<< HEAD
 module.exports = Recipe;
+=======
+module.exports = Recipe;
+>>>>>>> workspace-BrianD

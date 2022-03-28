@@ -1,5 +1,8 @@
 const router = require("express").Router();
+<<<<<<< HEAD
 
+=======
+>>>>>>> workspace-BrianD
 const {
   createUser,
   getSingleUser,
@@ -37,4 +40,8 @@ router.route("/:id")
 .put(authMiddleware, updateUser)
 .delete(authMiddleware, deleteUser);
 
+<<<<<<< HEAD
 module.exports = router;
+=======
+module.exports = router;
+>>>>>>> workspace-BrianD
