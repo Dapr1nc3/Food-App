@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Form, Button, Alert } from 'react-bootstrap';
+import { Form, Button, Alert, Container } from 'react-bootstrap';
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
@@ -54,7 +54,7 @@ const SignupForm = () => {
       });
 
       console.log(data);
-      
+
       Auth.login(data.addUser.token);
     } catch (err) {
       console.error(err);
@@ -69,12 +69,13 @@ const SignupForm = () => {
   };
 
   return (
-    <>
+    
+    <Container className="mx-auto" style={{width: 500}}>
       {/* This is needed for the validation functionality above */}
       <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
         {/* show alert if server response is bad */}
         <Alert dismissible onClose={() => setShowAlert(false)} show={showAlert} variant='danger'>
-          Something went wrong with your signup!
+          Something went Wrong with your Sign Up!
         </Alert>
         
         <Form.Group>
@@ -123,7 +124,8 @@ const SignupForm = () => {
         </Button>
       </Form>
       
-    </>
+    </Container>
+    
   );
 };
 

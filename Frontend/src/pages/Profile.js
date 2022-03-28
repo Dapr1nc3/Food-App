@@ -1,22 +1,22 @@
 import React from 'react';
-import { Redirect, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import { QUERY_USER } from '../utils/queries';
 import Auth from '../utils/auth';
 
 const Profile = (props) => {
-  const { username: userParam } = useParams();
+  // const { username: userParam } = useParams();
 
-  const { loading, data } = useQuery(userParam ? QUERY_USER : {
-    variables: { username: userParam },
+  const { loading, data } = useQuery( QUERY_USER,{
+    variables: { username: Auth.getProfile().data.username },
   });
 
   const user = data?.me || data?.user || {};
 
   // redirect to personal profile page if username is yours
-  if (Auth.loggedIn() && Auth.getProfile().data.username === userParam) {
-    return <Redirect to="/profile" />;
-  }
+  // if (Auth.loggedIn() && Auth.getProfile().data.username === userParam) {
+  //   return <Redirect to="/profile" />;
+  // }
 
   if (loading) {
     return <div>Loading...</div>;
@@ -36,7 +36,7 @@ const Profile = (props) => {
     <div>
       <div className="flex-row mb-3">
         <h2 className="bg-dark text-secondary p-3 display-inline-block">
-          Viewing {userParam ? `${user.username}'s` : 'your'} profile.
+          Viewing { `${user.username}'s` } profile.
         </h2>
 
       </div>

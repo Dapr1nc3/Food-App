@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Form, Button, Alert } from 'react-bootstrap';
+import { Form, Button, Alert, Container } from 'react-bootstrap';
 import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
@@ -51,10 +51,10 @@ const LoginForm = () => {
   };
 
   return (
-    <>
+    <Container className="mx-auto" style={{width: 500}}>
       <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
         <Alert dismissible onClose={() => setShowAlert(false)} show={showAlert} variant='danger'>
-          Something went wrong with your login credentials!
+          Something went Wrong with your Login Credentials!
         </Alert>
         <Form.Group>
           <Form.Label htmlFor='email'>Email</Form.Label>
@@ -66,7 +66,7 @@ const LoginForm = () => {
             value={userFormData.email}
             required
           />
-          <Form.Control.Feedback type='invalid'>Email is required!</Form.Control.Feedback>
+          <Form.Control.Feedback type='invalid'>Email is Required!</Form.Control.Feedback>
         </Form.Group>
 
         <Form.Group>
@@ -88,7 +88,7 @@ const LoginForm = () => {
           Submit
         </Button>
       </Form>
-    </>
+    </Container>
   );
 };
 
