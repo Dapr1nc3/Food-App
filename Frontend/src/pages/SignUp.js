@@ -17,7 +17,7 @@ const SignupForm = () => {
   // set state for alert
   const [showAlert, setShowAlert] = useState(false);
 
-  const [addUser, { error}] = useMutation(ADD_USER);
+  const [addUser, { error }] = useMutation(ADD_USER);
 
   useEffect(() => {
     if (error) {
@@ -36,6 +36,8 @@ const SignupForm = () => {
     });
   };
 
+  console.log(userFormData);
+
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
@@ -48,9 +50,11 @@ const SignupForm = () => {
 
     try {
       const { data } = await addUser({
-        variables: { ...userFormData },
+        variables: userFormData,
       });
 
+      console.log(data);
+      
       Auth.login(data.addUser.token);
     } catch (err) {
       console.error(err);
@@ -62,48 +66,6 @@ const SignupForm = () => {
       password: '',
     });
 
-
-    fetch("/auth/signup", {
-      method: "POST",
-      credentials: "include",
-      mode: "cors",
-      body: JSON.stringify({
-         password: this.state.password,
-         username: this.state.username
-      }),
-      headers: new Headers({
-         "Content-Type": "application/json"
-      })
-   })
-   .then(response => {
-      if (!response.ok) {
-         response.text().then((body) => {
-            this.setState({
-               errorRequest: body + " Please enter different username."
-            })
-         })
-         return;
-      }
-      this.props.login().then( () => {
-         this.props.history.push('/profile')
-      })
-   })
-   .catch(err => console.log(err));
-
-   this.setState({
-      username: "",
-      email: "",
-      password: "",
-      passwordConfirm: "",
-      
-   });
-
-
-
-
-
-
-
   };
 
   return (
@@ -114,7 +76,7 @@ const SignupForm = () => {
         <Alert dismissible onClose={() => setShowAlert(false)} show={showAlert} variant='danger'>
           Something went wrong with your signup!
         </Alert>
-
+        
         <Form.Group>
           <Form.Label htmlFor='username'>Username</Form.Label>
           <Form.Control
@@ -160,6 +122,7 @@ const SignupForm = () => {
           Submit
         </Button>
       </Form>
+      
     </>
   );
 };
