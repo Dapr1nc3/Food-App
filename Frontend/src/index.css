@@ -28,20 +28,20 @@ code {
 }
 
 /* callingCard.js */
-.container-spacing{
+.container-spacing {
   margin-top: 25px;
 }
 .card__space {
   margin-bottom: 30px;
 }
 
-.scrollable{
+.scrollable {
   overflow-y: auto;
   max-height: 300px;
 }
 
-.card-box{
-  width:600px;
+.card-box {
+  width: 600px;
   height: auto;
   /* margin: 30px auto; */
 }
@@ -81,3 +81,5 @@ code {
   max-height: 500px;
   width: 100%;
 }
+
+/* Profile.js */

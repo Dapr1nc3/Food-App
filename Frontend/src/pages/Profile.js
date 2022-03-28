@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Container, Button } from "react-bootstrap";
 import userPlaceholder from "../assets/images/userPlaceholder.png";
 import useLocalStorage from "../componets/localStorage/useLocalStorage";
