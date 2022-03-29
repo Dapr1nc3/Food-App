@@ -22,11 +22,7 @@ module.exports = {
     res.json(foundUser);
   },
 
-<<<<<<< HEAD
-  // create a user, sign a token, and send it back (to client/src/components/SignUpForm.js)
-=======
   // create a user, sign a token, and send it back (to client/src/components/SignUp.js)
->>>>>>> workspace-BrianD
   async createUser({ body }, res) {
     const user = await User.create(body);
 
@@ -173,8 +169,4 @@ module.exports = {
   //     }
   //     return res.json(updatedUser);
   //   },
-<<<<<<< HEAD
 };
-=======
-};
->>>>>>> workspace-BrianD

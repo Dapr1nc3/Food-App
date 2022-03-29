@@ -1,65 +1,36 @@
 {
-<<<<<<< HEAD
-  "name": "18-nosql",
-=======
   "name": "backend",
->>>>>>> workspace-BrianD
   "version": "1.0.0",
   "private": true,
   "description": "",
   "main": "server.js",
   "scripts": {
-<<<<<<< HEAD
-    "start": "node server.js",
-    "watch": "nodemon",
-    "seed": "node seeders/seeds.js",
-    "develop": "concurrently \"npm run watch\" \"cd ../Frontend && npm start\""
-=======
     "start": "node server",
     "watch": "nodemon",
     "seed": "node seeders/seeds.js"
->>>>>>> workspace-BrianD
   },
   "engines": {
     "node": ">=12.0.0 <17.5.0"
   },
   "keywords": [],
-<<<<<<< HEAD
-  "author": "Brian Done",
-=======
   "author": "",
->>>>>>> workspace-BrianD
   "license": "ISC",
   "dependencies": {
     "@apollo/client": "^3.5.10",
     "apollo-server-express": "^3.6.4",
-<<<<<<< HEAD
-    "bcrypt": "^5.0.1",
-    "dotenv": "^16.0.0",
-    "express": "^4.17.1",
-=======
     "axios": "^0.26.1",
     "bcrypt": "^5.0.1",
     "cors": "^2.8.5",
     "express": "^4.17.3",
->>>>>>> workspace-BrianD
     "faker": "^4.1.0",
     "graphql": "^16.3.0",
     "jsonwebtoken": "^8.5.1",
     "moment": "^2.29.1",
     "mongoose": "^5.9.7",
-<<<<<<< HEAD
-    "needle": "^3.0.0",
-=======
->>>>>>> workspace-BrianD
     "node": "^16.14.0",
     "react-router-dom": "^5.3.0"
   },
   "devDependencies": {
-<<<<<<< HEAD
-    "concurrently": "^7.0.0",
-=======
->>>>>>> workspace-BrianD
     "nodemon": "^2.0.15"
   }
 }

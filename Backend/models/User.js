@@ -1,5 +1,5 @@
-const { Schema, model, Types } = require('mongoose');
-const bcrypt = require('bcrypt');
+const { Schema, model, Types } = require("mongoose");
+const bcrypt = require("bcrypt");
 
 // import schema from recipe.js
 // const recipe = require('./Recipe');
@@ -15,16 +15,19 @@ const userSchema = new Schema(
       type: String,
       required: true,
       unique: true,
-      match: [/.+@.+\..+/, 'Must use a valid email address'],
+      match: [/.+@.+\..+/, "Must use a valid email address"],
     },
     password: {
       type: String,
       required: true,
     },
     // set savedRecipes to be an array of data that adheres to the RecipeSchema
-    savedRecipes: [{
-      type: Schema.Types.ObjectId,
-      ref: 'Recipe'}]
+    savedRecipes: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Recipe",
+      },
+    ],
   },
   // set this to use virtual below
   {
@@ -35,8 +38,8 @@ const userSchema = new Schema(
 );
 
 // hash user password
-userSchema.pre('save', async function (next) {
-  if (this.isNew || this.isModified('password')) {
+userSchema.pre("save", async function (next) {
+  if (this.isNew || this.isModified("password")) {
     const saltRounds = 10;
     this.password = await bcrypt.hash(this.password, saltRounds);
   }
@@ -50,14 +53,10 @@ userSchema.methods.isCorrectPassword = async function (password) {
 };
 
 // when we query a user, we'll also get another field called `recipeCount` with the number of saved recipes we have
-userSchema.virtual('recipeCount').get(function () {
+userSchema.virtual("recipeCount").get(function () {
   return this.savedRecipes.length;
 });
 
-const User = model('User', userSchema);
+const User = model("User", userSchema);
 
-<<<<<<< HEAD
 module.exports = User;
-=======
-module.exports = User;
->>>>>>> workspace-BrianD

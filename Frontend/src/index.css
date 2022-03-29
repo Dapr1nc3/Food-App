@@ -23,6 +23,44 @@ code {
 }
 
 .about-image {
+<<<<<<< HEAD
+=======
+  display: flex;
+}
+
+.about-us .card-group {
+  margin: auto;
+  width: 70%;
+  padding-bottom: 13%;
+}
+
+ul li {
+  list-style: none;
+  float: left;
+  padding-left: 0;
+  margin: 10px;
+}
+
+
+
+/* callingCard.js */
+.container-spacing {
+  margin-top: 25px;
+}
+.card__space {
+  margin-bottom: 10px;
+}
+
+.scrollable {
+  overflow-y: auto;
+  max-height: 300px;
+}
+
+.card-box {
+  width: 600px;
+  height: auto;
+  /* margin: 30px auto; */
+>>>>>>> develop
   margin-right: 20%;
   display: flex;
 }
@@ -103,7 +141,17 @@ code {
 .img__carousel {
   max-height: 500px;
   width: 100%;
+<<<<<<< HEAD
 }
 
 
 /* Profile.js */
+=======
+
+}
+
+
+
+/* Profile.js */
+
+>>>>>>> develop
