@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-/* Font Import */
-@import url('https://fonts.googleapis.com/css2?family=Klee+One:wght@600&display=swap');
-
-* {
-  font-family: 'Klee One', cursive;
-}
-
-
-=======
->>>>>>> workspace-BrianD
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -34,43 +23,6 @@ code {
 }
 
 .about-image {
-<<<<<<< HEAD
-  display: flex;
-}
-
-.about-us .card-group {
-  margin: auto;
-  width: 70%;
-  padding-bottom: 13%;
-}
-
-ul li {
-  list-style: none;
-  float: left;
-  padding-left: 0;
-  margin: 10px;
-}
-
-
-
-/* callingCard.js */
-.container-spacing {
-  margin-top: 25px;
-}
-.card__space {
-  margin-bottom: 10px;
-}
-
-.scrollable {
-  overflow-y: auto;
-  max-height: 300px;
-}
-
-.card-box {
-  width: 600px;
-  height: auto;
-  /* margin: 30px auto; */
-=======
   margin-right: 20%;
   display: flex;
 }
@@ -78,7 +30,6 @@ ul li {
 /* callingCard.js */
 .card__space {
   margin-bottom: 30px;
->>>>>>> workspace-BrianD
 }
 
 /* Navagation.js */
@@ -88,22 +39,15 @@ ul li {
 
 /* Home.js */
 .card-spacing {
-<<<<<<< HEAD
-  margin: 2%;
-  border-radius: 10px 10px 10px 10px !important;
-  
-=======
   margin: 1.5%;
   border-radius: 10px 10px 10px 10px !important;
->>>>>>> workspace-BrianD
 }
 
 .image-border {
   border-radius: 10px 10px 10px 10px !important;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD:src/index.css
+
 .grow:hover { 
   transform: scale(1.1); 
   cursor: pointer;
@@ -139,9 +83,7 @@ ul li {
 .navbar-link:hover {
   background-color: aquamarine;
 }
-=======
-=======
->>>>>>> workspace-BrianD
+
 .grow {
   transition: all 0.2s ease-in-out;
   cursor: pointer;
@@ -161,14 +103,7 @@ ul li {
 .img__carousel {
   max-height: 500px;
   width: 100%;
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
->>>>>>> workspace-Devin:Frontend/src/index.css
-=======
+
 
 /* Profile.js */
->>>>>>> workspace-Devin
-=======
-}
->>>>>>> workspace-BrianD
