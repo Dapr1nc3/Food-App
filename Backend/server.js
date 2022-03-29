@@ -2,17 +2,24 @@ const express = require("express");
 const { ApolloServer } = require("apollo-server-express");
 const { typeDefs, resolvers } = require("./schemas");
 const db = require("./config/connection");
-const cors = require('cors');
+const { authMiddleware } = require("./utils/auth");
+const cors = require("cors");
 
 const PORT = process.env.PORT || 3001;
 const app = express();
+
+// const corsOptions = {
+//   origin: "http://localhost:3001",
+//   credentials: true
+// };
 
 const startServer = async () => {
   // create a new Apollo server and pass in our schema data
   const server = new ApolloServer({
     typeDefs,
     resolvers,
-    // context: authMiddleware
+    // cors: corsOptions,
+    context: authMiddleware,
   });
 
   // Start the Apollo server
@@ -34,8 +41,7 @@ app.use(express.urlencoded({ extended: true }));
 // FIXME: might need this to change if the public file cant be in the Frontend folder for the app to open
 app.use(express.static(".././Frontend/public"));
 app.use(require("./routes"));
-app.use(cors());
-
+// app.use(cors(corsOptions));
 
 db.once("open", () => {
   app.listen(PORT, () =>

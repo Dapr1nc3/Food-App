@@ -3,16 +3,10 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-// the below is imported for testing purposes
-import UsersTest from "./components(test)/UserTest";
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* Users is a test file to verify connection of react to backend */}
-    <div>
-      <App />
-      <UsersTest />
-    </div>
+    <App />
   </React.StrictMode>,
   document.getElementById("root")
 );

@@ -23,27 +23,48 @@ code {
 }
 
 .about-image {
+  display: flex;
+}
+
+.about-us .card-group {
+  margin: auto;
+  width: 70%;
+  padding-bottom: 13%;
+}
+
+ul li {
+  list-style: none;
+  float: left;
+  padding-left: 0;
+  margin: 10px;
+}
+
+
+
+/* callingCard.js */
+.container-spacing {
+  margin-top: 25px;
+}
+.card__space {
+  margin-bottom: 10px;
+}
+
+.scrollable {
+  overflow-y: auto;
+  max-height: 300px;
+}
+
+.card-box {
+  width: 600px;
+  height: auto;
+  /* margin: 30px auto; */
   margin-right: 20%;
   display: flex;
 }
 
 /* callingCard.js */
-.container-spacing{
-  margin-top: 25px;
-}
 .card__space {
   margin-bottom: 30px;
-}
-
-.scrollable{
-  overflow-y: auto;
-  max-height: 300px;
-}
-
-.card-box{
-  width:600px;
-  height: auto;
-  /* margin: 30px auto; */
 }
 
 /* Navagation.js */
@@ -59,6 +80,43 @@ code {
 
 .image-border {
   border-radius: 10px 10px 10px 10px !important;
+}
+
+
+.grow:hover { 
+  transform: scale(1.1); 
+  cursor: pointer;
+}
+
+.grow { 
+  transition: all .2s ease-in-out; 
+}
+
+/* Work on the spacing when growing on mobile devices */
+
+
+/* Site Logo Styling */
+.site-logo {
+  height: 45px;
+}
+
+.site-logo:hover {
+  transform: scale(1.5);
+  transition: .2s ease-in-out;
+}
+
+/* Profile picture styling */
+.profile-picture {
+  border-radius: 50%;
+}
+
+/* Navbar Styling */
+.nav-bar {
+  background-color: #019b9b !important;
+}
+
+.navbar-link:hover {
+  background-color: aquamarine;
 }
 
 .grow {
@@ -80,4 +138,10 @@ code {
 .img__carousel {
   max-height: 500px;
   width: 100%;
+
 }
+
+
+
+/* Profile.js */
+

@@ -24,9 +24,7 @@ const recipeController = {
       // return if no recipe is found
       .then((dbUsersData) => {
         if (!dbUsersData) {
-          res
-            .status(404)
-            .json({ message: "No Recipe Found with this ID!" });
+          res.status(404).json({ message: "No Recipe Found with this ID!" });
           return;
         }
         res.json(dbUsersData);
