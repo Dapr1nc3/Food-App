@@ -1,30 +1,22 @@
-const jwt = require('jsonwebtoken');
+const jwt = require("jsonwebtoken");
 
 // set token secret and expiration date
-const secret = 'mysecretsshhhhh';
-const expiration = '2h';
+const secret = "mysecretsshhhhh";
+const expiration = "2h";
 
 module.exports = {
   // function for our authenticated routes
-<<<<<<< HEAD
-  authMiddleware: function (req, res, next) {
-=======
-  authMiddleware: function ({req}) {
->>>>>>> workspace-BrianD
+  authMiddleware: function ({ req }) {
     // allows token to be sent via  req.query or headers
     let token = req.query.token || req.headers.authorization;
 
     // ["Bearer", "<tokenvalue>"]
     if (req.headers.authorization) {
-      token = token.split(' ').pop().trim();
+      token = token.split(" ").pop().trim();
     }
 
     if (!token) {
-<<<<<<< HEAD
-      return res.status(400).json({ message: 'You have no token!' });
-=======
-      return req
->>>>>>> workspace-BrianD
+      return req;
     }
 
     // verify token and get user data out of it
@@ -32,27 +24,15 @@ module.exports = {
       const { data } = jwt.verify(token, secret, { maxAge: expiration });
       req.user = data;
     } catch {
-      console.log('Invalid token');
-<<<<<<< HEAD
-      return res.status(400).json({ message: 'invalid token!' });
+      console.log("Invalid token");
     }
 
     // send to next endpoint
-    next();
-=======
-    }
-
-    // send to next endpoint
-    return req
->>>>>>> workspace-BrianD
+    return req;
   },
   signToken: function ({ username, email, _id }) {
     const payload = { username, email, _id };
 
     return jwt.sign({ data: payload }, secret, { expiresIn: expiration });
   },
-<<<<<<< HEAD
 };
-=======
-};
->>>>>>> workspace-BrianD
