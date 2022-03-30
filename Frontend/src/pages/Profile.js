@@ -1,10 +1,10 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+// import { useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import { QUERY_USER } from "../utils/queries";
 import Auth from "../utils/auth";
-import { Container } from "react-bootstrap";
-import userPlaceholder from "../assets/images/profile-placeholder.png";
+import UseLocalStorage from "../componets/localStorage/useLocalStorage";
+import { Container, Form } from "react-bootstrap";
 
 const Profile = (props) => {
   // const { username: userParam } = useParams();
@@ -51,14 +51,20 @@ const Profile = (props) => {
             <div>
               <div className="card-group">
                 <div className="card">
-                  <img
+                  {/* <img
                     alt=""
                     src={userPlaceholder}
                     className="profile-picture"
-                  ></img>
+                  ></img> */}
                 </div>
                 <div className="card">
-                  <p>Make this an input...</p>
+                  <Form.Group
+                    className="mb-3"
+                    controlId="exampleForm.ControlTextarea1"
+                  >
+                    <Form.Label>Example textarea</Form.Label>
+                    <Form.Control as="textarea" rows={3} />
+                  </Form.Group>
                 </div>
               </div>
               <br></br>
