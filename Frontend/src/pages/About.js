@@ -26,16 +26,13 @@ const About = () => {
           </div>
           <div className="card">
             <p className="about-description">
-              Hello, you will see my projects, skills attained. Contact, and
-              About me, sections are located on this portfolio. Now, to describe
-              myself, and the things I like in a short paragraph is difficult,
-              but in short, I love my family. I enjoy multiple outdoor
-              activities, sports competitions, as well as.... coding! I've
-              always had an interest in it and how coding works, so I took the
-              leap of faith in the area and wouldn't have imagined myself living
-              at my desk. Enjoying the coding world is a big thing for me and
-              it's very fun most of the time. I've met a lot of fun and
-              interesting people in this field.
+              Hey there, my name is Devin. I am a Jr Web Developer. I like
+              working on the Front End of websites. I enjoy coding and watch
+              anime on my off time. I also like to play Elden Ring which is my
+              current obsession. I also enjoy being with my younger siblings. I
+              will be expanding my knowledge on Web Development as well as
+              coding. I am hoping to make a website that is an anime streaming
+              service someday in the future.
             </p>
 
             {/* Footer */}
