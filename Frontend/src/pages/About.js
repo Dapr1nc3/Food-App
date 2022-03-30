@@ -1,6 +1,9 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import BottomPage from "../componets/Footer/BottomPage";
+import alexImg from "../assets/images/Alex.jpeg";
+import luisImg from "../assets/images/Luis.jpg";
+import brianImg from "../assets/images/Brian.jpg";
 import aboutImg from "../assets/images/userPlaceholder.png";
 import devinImg from "../assets/images/Devin-pic.jpg";
 
@@ -57,38 +60,28 @@ const About = () => {
         <h2 className="text-center">Alex The OG</h2>
         <div className="card-group card-spacing card__space">
           <div className="card">
-            <img className="picture-about-size" alt="" src={aboutImg}></img>
+            <img className="picture-about-size" alt="" src={alexImg}></img>
           </div>
           <div className="card">
             <p className="about-description">
-              Hello, you will see my projects, skills attained. Contact, and
-              About me, sections are located on this portfolio. Now, to describe
-              myself, and the things I like in a short paragraph is difficult,
-              but in short, I love my family. I enjoy multiple outdoor
-              activities, sports competitions, as well as.... coding! I've
-              always had an interest in it and how coding works, so I took the
-              leap of faith in the area and wouldn't have imagined myself living
-              at my desk. Enjoying the coding world is a big thing for me and
-              it's very fun most of the time. I've met a lot of fun and
-              interesting people in this field.
+              Hello, my name is Alex. I am a Junior Web Dev. I enjoy coding,
+              specially the backend. It's like figuring out a puzzle and I enjoy
+              challenges. I am hoping to expand my knowledge and see where my
+              studies will take me. I am looking forward to all of the new and
+              exciting challenges in the future!
             </p>
 
             {/* Footer */}
             <footer>
               <ul>
                 <li>
-                  <a href="https://www.github.com">
+                  <a href="https://www.github.com/ajbf92">
                     <i class="fa-brands fa-github fa-2xl"></i>
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.linkedin.com">
+                  <a href="https://www.linkedin.com/in/alex-betancourt-267187236/">
                     <i class="fa-brands fa-linkedin fa-2xl"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://www.facebook.com">
-                    <i class="fa-brands fa-facebook fa-2xl"></i>
                   </a>
                 </li>
               </ul>
@@ -100,38 +93,27 @@ const About = () => {
         <h2 className="text-center">Brian the OG</h2>
         <div className="card-group card-spacing card__space">
           <div className="card">
-            <img className="picture-about-size" alt="" src={aboutImg}></img>
+            <img className="picture-about-size" alt="" src={brianImg}></img>
           </div>
           <div className="card">
             <p className="about-description">
-              Hello, you will see my projects, skills attained. Contact, and
-              About me, sections are located on this portfolio. Now, to describe
-              myself, and the things I like in a short paragraph is difficult,
-              but in short, I love my family. I enjoy multiple outdoor
-              activities, sports competitions, as well as.... coding! I've
-              always had an interest in it and how coding works, so I took the
-              leap of faith in the area and wouldn't have imagined myself living
-              at my desk. Enjoying the coding world is a big thing for me and
-              it's very fun most of the time. I've met a lot of fun and
-              interesting people in this field.
+              Hi there! My name is Brian. I am a Web Developer. I enjoy creating
+              the backend of websites and fixing things up. I love outer space
+              and hope to create a website about outer space some time in the
+              future. I enjoy coding and spending time with my wife and kids.
             </p>
 
             {/* Footer */}
             <footer>
               <ul>
                 <li>
-                  <a href="https://www.github.com">
+                  <a href="https://github.com/bdoneq7">
                     <i class="fa-brands fa-github fa-2xl"></i>
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.linkedin.com">
+                  <a href="https://www.linkedin.com/in/brian-done-9080b026/">
                     <i class="fa-brands fa-linkedin fa-2xl"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://www.facebook.com">
-                    <i class="fa-brands fa-facebook fa-2xl"></i>
                   </a>
                 </li>
               </ul>
@@ -143,38 +125,30 @@ const About = () => {
         <h2 className="text-center">Luis</h2>
         <div className="card-group card-spacing card__space">
           <div className="card">
-            <img className="picture-about-size" alt="" src={aboutImg}></img>
+            <img className="picture-about-size" alt="" src={luisImg}></img>
           </div>
           <div className="card">
             <p className="about-description">
-              Hello, you will see my projects, skills attained. Contact, and
-              About me, sections are located on this portfolio. Now, to describe
-              myself, and the things I like in a short paragraph is difficult,
-              but in short, I love my family. I enjoy multiple outdoor
-              activities, sports competitions, as well as.... coding! I've
-              always had an interest in it and how coding works, so I took the
-              leap of faith in the area and wouldn't have imagined myself living
-              at my desk. Enjoying the coding world is a big thing for me and
-              it's very fun most of the time. I've met a lot of fun and
-              interesting people in this field.
+              Hello there! I'm Luis. I'm a Junior Web Developer. I enjoy working
+              on the Front End of sites. I enjoy coding, and when I am not
+              working or coding I enjoy playing video games. Very hooked on
+              Elden Ring at the moment! I will keep expanding my knowledge in
+              coding. I want to create a social media site that everyone will
+              enjoy using. Hopefully someday in the future you will see that
+              page!
             </p>
 
             {/* Footer */}
             <footer>
               <ul>
                 <li>
-                  <a href="https://www.github.com">
+                  <a href="https://github.com/luistorano">
                     <i class="fa-brands fa-github fa-2xl"></i>
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.linkedin.com">
+                  <a href="https://www.linkedin.com/in/luis-torano-serrano-a07a91209/">
                     <i class="fa-brands fa-linkedin fa-2xl"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://www.facebook.com">
-                    <i class="fa-brands fa-facebook fa-2xl"></i>
                   </a>
                 </li>
               </ul>
