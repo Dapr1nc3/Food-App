@@ -45,6 +45,13 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
+
+    // addSaveRecipe: async (parent, args, context) => {
+    //   await User.findByIdAndUpdate(
+    //     { _id: args._id },
+    //     { $push: { savedRecipes: args.recipe } }
+    //   );
+    // },
   },
 };
 

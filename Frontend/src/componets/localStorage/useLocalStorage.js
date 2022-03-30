@@ -1,19 +1,22 @@
-import React, { useState } from "react";
+import { useState, useEffect } from "react";
 
-function UseLocalStorage() {
-  const [Name, setName] = useState("");
-
-  return (
-    <div className="App">
-      {Name}
-      <input
-        name="Name"
-        id="name"
-        data-tid="avy"
-        onChange={(e) => setName(e.target.value)}
-      />
-    </div>
-  );
+function getSavedValue(key, initialValue) {
+  const savedValue = JSON.parse(localStorage.getItem(key));
+  if (savedValue) {
+    return savedValue;
+  } else {
+    return initialValue;
+  }
 }
 
-export default UseLocalStorage;
+export default function UseLocalStorage(key, initialValue) {
+  let [value, setValue] = useState(() => {
+    return getSavedValue(key, initialValue);
+  });
+
+  useEffect(() => {
+    localStorage.setItem(key, JSON.stringify(value));
+  }, [value, key]);
+
+  return [value, setValue];
+}

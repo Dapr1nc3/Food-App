@@ -1,9 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Card, Button, Row, Col } from "react-bootstrap";
-
+import { useQuery } from "@apollo/client";
+import { QUERY_USER } from "../../utils/queries";
+import Auth from "../../utils/auth";
+import UseLocalStorage from "../localStorage/useLocalStorage";
 // import cardData from "../../data/cardData.json";
 
-const CallingCard = ({ cardData }) => {
+const CallingCard = ({ cardData, showButton, showDelete }) => {
+  const { loading, data } = useQuery(QUERY_USER, {
+    variables: { username: Auth.getProfile().data.username },
+  });
+
+  const user = data?.me || data?.user || {};
+  const savedRecipes = JSON.parse(localStorage.getItem(user.username));
+
+  const handleUnsave = (id) => {
+    const removedSavedRecipe = savedRecipes?.filter(
+      (recipe) => recipe.id !== id
+    );
+    localStorage.setItem(user.username, JSON.stringify(removedSavedRecipe));
+    window.location.reload();
+  };
+
+  const handleSave = (recipe) => {
+    let recipeArray = savedRecipes ? savedRecipes : [];
+    recipeArray.push(recipe);
+    // const savedRecipe = {
+    //   [user.username]: { recipe },
+    // };
+    localStorage.setItem(user.username, JSON.stringify(recipeArray));
+  };
+
+  let [value, setValue] = UseLocalStorage("name", "");
   return (
     <div>
       <Container
@@ -32,18 +60,43 @@ const CallingCard = ({ cardData }) => {
                       ></div>
                     </Card.Text>
                   </p>
-                  <Button
-                    onClick={() => {
-                      window.location.href = d.sourceUrl;
-                    }}
-                    variant="primary"
-                  >
-                    Click Here
-                  </Button>
+                  {showButton && (
+                    <>
+                      <Button
+                        onClick={() => {
+                          window.location.href = d.sourceUrl;
+                        }}
+                        variant="primary"
+                      >
+                        Learn More
+                      </Button>
+                      <Button onClick={() => handleSave(d)} variant="primary">
+                        Save
+                      </Button>
+                    </>
+                  )}
+                  {showDelete && (
+                    <Button
+                      onClick={() => handleUnsave(d.id)}
+                      variant="primary"
+                    >
+                      Unsave
+                    </Button>
+                  )}
                 </Card.Body>
               </Card>
             </Col>
           ))}
+          {/* <div className="App">
+            {value}
+            <input
+              name="Input"
+              id="Input"
+              type="text"
+              onChange={(e) => setValue(e.target.value)}
+              value={value}
+            />
+          </div> */}
         </Row>
       </Container>
     </div>

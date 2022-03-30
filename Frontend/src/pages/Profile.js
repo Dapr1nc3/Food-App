@@ -7,6 +7,7 @@ import BottomPage from "../componets/Footer/BottomPage";
 import userPlaceholder from "../assets/images/profile-placeholder.png";
 import Auth from "../utils/auth";
 import { Container, Form } from "react-bootstrap";
+import CallingCard from "../componets/Card/callingCard";
 
 const Profile = (props) => {
   // const { username: userParam } = useParams();
@@ -34,6 +35,8 @@ const Profile = (props) => {
       </h4>
     );
   }
+
+  const savedRecipes = JSON.parse(localStorage.getItem(user.username));
 
   return (
     <div>
@@ -69,6 +72,15 @@ const Profile = (props) => {
             <Button className=' card profile-btn'>My Recipes</Button> */}
               </div>
             </div>
+            {savedRecipes ? (
+              <CallingCard
+                cardData={savedRecipes}
+                showButton={false}
+                showDelete={true}
+              />
+            ) : (
+              <div>No saved Recipes</div>
+            )}
           </Container>
         </div>
       </div>
