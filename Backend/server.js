@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 3001;
 const app = express();
 
 // const corsOptions = {
-//   origin: "http://localhost:3001",
+//   origin: "http://localhost:3000",
 //   credentials: true
 // };
 
@@ -41,8 +41,8 @@ app.use(express.urlencoded({ extended: true }));
 // FIXME: might need this to change if the public file cant be in the Frontend folder for the app to open
 app.use(express.static(".././Frontend/public"));
 app.use(require("./routes"));
-// app.use(cors(corsOptions));
-
+app.use(cors());
+// corsOptions
 db.once("open", () => {
   app.listen(PORT, () =>
     console.log(`Server Successfully listening on localhost:${PORT}`)
