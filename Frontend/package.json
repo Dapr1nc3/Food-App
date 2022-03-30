@@ -31,7 +31,6 @@
   "proxy": "http://localhost:3001/",
   "eslintConfig": {
     "extends": [
-      "plugin:react/recommended",
       "react-app",
       "react-app/jest"
     ]
