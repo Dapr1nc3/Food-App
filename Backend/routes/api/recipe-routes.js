@@ -10,7 +10,9 @@ const {
 } = require("../../controllers/recipe-controller");
 
 // GET and POST All Recipes
-router.route("/").get(getAllRecipes).post(createRecipe);
+router.route("/")
+  .get(getAllRecipes)
+  .post(createRecipe);
 
 // GET, PUT, and DELETE Recipes
 router
