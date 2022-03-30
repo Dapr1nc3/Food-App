@@ -1,13 +1,15 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
-import { useQuery } from '@apollo/client';
-import { QUERY_USER } from '../utils/queries';
-import Auth from '../utils/auth';
+import React from "react";
+import { useParams } from "react-router-dom";
+import { useQuery } from "@apollo/client";
+import { QUERY_USER } from "../utils/queries";
+import Auth from "../utils/auth";
+import { Container } from "react-bootstrap";
+import userPlaceholder from "../assets/images/profile-placeholder.png";
 
 const Profile = (props) => {
   // const { username: userParam } = useParams();
 
-  const { loading, data } = useQuery( QUERY_USER,{
+  const { loading, data } = useQuery(QUERY_USER, {
     variables: { username: Auth.getProfile().data.username },
   });
 
@@ -31,16 +33,43 @@ const Profile = (props) => {
     );
   }
 
-
   return (
     <div>
       <div className="flex-row mb-3">
         <h2 className="bg-dark text-secondary p-3 display-inline-block">
-          Viewing { `${user.username}'s` } profile.
+          Viewing {`${user.username}'s`} profile.
         </h2>
+        <div>
+          {/* Banner Container */}
+          <Container>
+            <img alt="" src=""></img>
+            <h2>Main Avatar</h2>
+          </Container>
 
+          {/* Profile Container */}
+          <Container>
+            <div>
+              <div className="card-group">
+                <div className="card">
+                  <img
+                    alt=""
+                    src={userPlaceholder}
+                    className="profile-picture"
+                  ></img>
+                </div>
+                <div className="card">
+                  <p>Make this an input...</p>
+                </div>
+              </div>
+              <br></br>
+              <div className="card-group">
+                {/* <Button className='card profile-btn'>Favorite Recipes</Button>
+            <Button className=' card profile-btn'>My Recipes</Button> */}
+              </div>
+            </div>
+          </Container>
+        </div>
       </div>
-
     </div>
   );
 };

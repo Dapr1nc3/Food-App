@@ -1,10 +1,9 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import Navigation from "./components/Navbar/Navigation";
+import Navigation from "./componets/Navbar/Navagation";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import SignUp from "./pages/SignUp";
 import SignIn from "./pages/logIn";
@@ -35,12 +34,11 @@ const App = () => {
   return (
     <ApolloProvider client={client}>
       <div className="App">
-        <Navigation />
         <BrowserRouter>
+          <Navigation />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
             <Route path="/signin" element={<SignIn />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/profile" element={<Profile />} />

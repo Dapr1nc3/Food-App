@@ -1,8 +1,7 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import { Form, Button } from "react-bootstrap";
 
-
-const SearchBar = ({setRecipes}) => {
+const SearchBar = ({ setRecipes }) => {
   const searchInput = useRef(null);
 
   const runSearch = (e) => {
@@ -17,19 +16,22 @@ const SearchBar = ({setRecipes}) => {
 
     fetch(apiUrl, {
       method: "GET",
-      headers: { "Content-Type": "application/json"
-      // ,"Access-Control-Allow-Origin": true
-     },
-    }).then((response) => {
-      if (response.ok) {
-        // console.log(response.json())
-        return response.json()
-      }
+      headers: {
+        "Content-Type": "application/json",
+        // ,"Access-Control-Allow-Origin": true
+      },
     })
-    .then((res) => {setRecipes(res.results)})
-    .catch(err=> console.log(err))
+      .then((response) => {
+        if (response.ok) {
+          // console.log(response.json())
+          return response.json();
+        }
+      })
+      .then((res) => {
+        setRecipes(res.results);
+      })
+      .catch((err) => console.log(err));
   };
-
 
   return (
     <div>
