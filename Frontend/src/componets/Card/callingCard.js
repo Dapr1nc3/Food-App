@@ -1,6 +1,5 @@
 import React from "react";
-import { Container, Card, CardGroup, Button, Row, Col } from "react-bootstrap";
-import cake from "../../assets/images/cake.jpg";
+import { Container, Card, Button, Row, Col } from "react-bootstrap";
 // import cardData from "../../data/cardData.json";
 
 const CallingCard = ({cardData}) => {

@@ -13,10 +13,10 @@ export default function SlideShow() {
               <Carousel.Item className="img__carousel" key={i}>
                 <img className="d-block w-100" src={d.imageUrl} alt={d.label} />
 
-                <Carousel.Caption>
+                {/* <Carousel.Caption>
                   <h3>{d.label}</h3>
                   <p>{d.text}</p>
-                </Carousel.Caption>
+                </Carousel.Caption> */}
               </Carousel.Item>
             ))}
           </Carousel>

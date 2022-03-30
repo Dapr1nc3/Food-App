@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef} from "react";
 import { Form, Button } from "react-bootstrap";
 
 
@@ -19,7 +19,7 @@ const SearchBar = ({setRecipes}) => {
       method: "GET",
       headers: { "Content-Type": "application/json"
       // ,"Access-Control-Allow-Origin": true
-     },
+      },
     }).then((response) => {
       if (response.ok) {
         // console.log(response.json())
@@ -34,7 +34,7 @@ const SearchBar = ({setRecipes}) => {
   return (
     <div>
       <>
-        <Form>
+        <Form className="search-form">
           <Form.Group className="mb-3" controlId="formGroupEmail">
             <Form.Label></Form.Label>
             <Form.Control
@@ -43,7 +43,7 @@ const SearchBar = ({setRecipes}) => {
               ref={searchInput}
             />
           </Form.Group>
-          <Button onClick={runSearch} variant="primary" type="submit">
+          <Button onClick={runSearch} variant="primary" type="submit" className="random-btn">
             Find Random Recipes
           </Button>
         </Form>
