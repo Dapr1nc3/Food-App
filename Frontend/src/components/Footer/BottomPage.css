@@ -1,0 +1,22 @@
+.main-footer {
+  color: white;
+  background-color: rgb(3, 123, 153);
+  padding-top: 25px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin-top: 10% !important;
+}
+
+/* .main-footer {
+  color: white;
+  background-color: grey;
+  padding-top: 3em;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-fluid {
+  display: flex;
+} */

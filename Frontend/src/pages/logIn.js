@@ -50,7 +50,7 @@ const LoginForm = () => {
   };
 
   return (
-    <Container className="mx-auto" style={{ width: 500 }}>
+    <Container className="mx-auto" style={{ width: 500, marginTop: "2rem" }}>
       <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
         <Alert
           dismissible
@@ -76,7 +76,7 @@ const LoginForm = () => {
         </Form.Group>
 
         <Form.Group>
-          <Form.Label htmlFor="password">Password</Form.Label>
+          <Form.Label style={{ marginTop: "1rem" }} htmlFor="password">Password</Form.Label>
           <Form.Control
             type="password"
             placeholder="Your password"
@@ -89,7 +89,7 @@ const LoginForm = () => {
             Password is required!
           </Form.Control.Feedback>
         </Form.Group>
-        <Button
+        <Button style={{ marginTop: "1rem" }}
           disabled={!(userFormData.email && userFormData.password)}
           type="submit"
           variant="success"

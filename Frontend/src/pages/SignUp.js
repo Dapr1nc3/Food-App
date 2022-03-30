@@ -83,7 +83,7 @@ const SignupForm = () => {
 
         <Form.Group>
           <Form.Label htmlFor="username">Username</Form.Label>
-          <Form.Control
+          <Form.Control 
             type="text"
             placeholder="Your username"
             name="username"
@@ -98,7 +98,7 @@ const SignupForm = () => {
 
         <Form.Group>
           <Form.Label htmlFor="email">Email</Form.Label>
-          <Form.Control
+          <Form.Control 
             type="email"
             placeholder="Your email address"
             name="email"
@@ -112,8 +112,8 @@ const SignupForm = () => {
         </Form.Group>
 
         <Form.Group>
-          <Form.Label htmlFor="password">Password</Form.Label>
-          <Form.Control
+          <Form.Label  htmlFor="password">Password</Form.Label>
+          <Form.Control 
             type="password"
             placeholder="Your password"
             name="password"

@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import { Form, Button } from "react-bootstrap";
 
 
@@ -34,7 +34,7 @@ const SearchBar = ({setRecipes}) => {
   return (
     <div>
       <>
-        <Form>
+        <Form style={{display: 'flex', flexDirection: 'column', justifyContent: 'right'}}>
           <Form.Group className="mb-3" controlId="formGroupEmail">
             <Form.Label></Form.Label>
             <Form.Control
@@ -43,7 +43,7 @@ const SearchBar = ({setRecipes}) => {
               ref={searchInput}
             />
           </Form.Group>
-          <Button onClick={runSearch} variant="primary" type="submit">
+          <Button style={{maxWidth: "12rem"}} onClick={runSearch} variant="primary" type="submit">
             Find Random Recipes
           </Button>
         </Form>

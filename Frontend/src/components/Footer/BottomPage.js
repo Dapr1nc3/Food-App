@@ -4,12 +4,22 @@ import "./BottomPage.css";
 const BottomPage = () => {
   return (
     <>
-      <div className="main-footer">
-        <div className="container">
+      <footer className="main-footer">
+        {/* classname was container */}
+        <div className="" fluid> 
           <div className="row">
-            <div className="col">
-              <h4>H4 GOES HERE</h4>
-              <ul className="list-unstyled">
+            {/* classname was col */}
+            <div className="text-center">
+              <h4>Contact Information</h4>
+                <p>
+                  Orlando FL
+                  <br></br>
+                  (321)123-4567
+                  <br></br>
+                  Email: food4thoughtcontact@gmail.com
+                </p>
+            </div>
+              {/* <ul className="list-unstyled">
                 <li>321-321-3211</li>
                 <li>Orlando, Florida</li>
                 <li>That place around the corner</li>
@@ -32,17 +42,17 @@ const BottomPage = () => {
                 <li>contnet here</li>
                 <li>contnet here</li>
               </ul>
-            </div>
+            </div> */}
           </div>
           <hr />
           <div className="row text-center">
             <p className="col-sm">
-              &copy;{new Date().getFullYear()} Binary Brians INC | All rights
+              &copy;{new Date().getFullYear()} Binary Brains INC | All rights
               reserved | Privacy
             </p>
           </div>
         </div>
-      </div>
+      </footer>
     </>
   );
 };
