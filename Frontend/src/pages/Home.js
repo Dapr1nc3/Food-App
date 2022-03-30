@@ -10,6 +10,7 @@ const Home = () => {
   const [recipes, setRecipes] = useState();
 
   return (
+    <>
     <Container>
       <SlideShow />
       <SearchBar setRecipes={setRecipes} />
@@ -21,8 +22,10 @@ const Home = () => {
           <img variant="top" src={Breakfast} className="image-border" /> */}
         </>
       )}
-      <BottomPage />
     </Container>
+      <BottomPage />
+    
+    </>
   );
 };
 
