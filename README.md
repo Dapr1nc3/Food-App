@@ -15,7 +15,7 @@ $~$
 
 ### Bellow you can see an example of the site:
 ---
-![alt text]()
+![alt text](https://github.com/Dapr1nc3/Food-App/blob/workspace-luis/Frontend/src/assets/images/food4though-demo%20Gif.gif)
 $~$
 
 $~$
