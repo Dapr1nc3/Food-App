@@ -34,8 +34,8 @@ const App = () => {
   return (
     <ApolloProvider client={client}>
       <div className="App">
-        <Navigation showLogOut={false} />
         <BrowserRouter>
+          <Navigation showLogOut={false} />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
