@@ -8,6 +8,7 @@ import userPlaceholder from "../assets/images/profile-placeholder.png";
 import Auth from "../utils/auth";
 import { Container, Form } from "react-bootstrap";
 import CallingCard from "../componets/Card/callingCard";
+import Navigation from "../componets/Navbar/Navagation";
 
 const Profile = (props) => {
   // const { username: userParam } = useParams();
@@ -39,53 +40,56 @@ const Profile = (props) => {
   const savedRecipes = JSON.parse(localStorage.getItem(user.username));
 
   return (
-    <div>
-      <div className="flex-row mb-3">
-        <h2 className="bg-dark text-secondary p-3 display-inline-block">
-          Viewing {`${user.username}'s`} profile.
-        </h2>
-        <div>
-          {/* Banner Container */}
-          <Container>
-            <img alt="" src=""></img>
-            <h2>Main Avatar</h2>
-          </Container>
+    <>
+      {/* <Navigation showLogOut={true} /> */}
+      <div>
+        <div className="flex-row mb-3">
+          <h2 className="bg-dark text-secondary p-3 display-inline-block">
+            Viewing {`${user.username}'s`} profile.
+          </h2>
+          <div>
+            {/* Banner Container */}
+            <Container>
+              <img alt="" src=""></img>
+              <h2>Main Avatar</h2>
+            </Container>
 
-          {/* Profile Container */}
-          <Container>
-            <div>
-              <div className="card-group">
-                <div className="card">
-                  <img
-                    alt=""
-                    src={userPlaceholder}
-                    className="profile-picture"
-                  ></img>
+            {/* Profile Container */}
+            <Container>
+              <div>
+                <div className="card-group">
+                  <div className="card">
+                    <img
+                      alt=""
+                      src={userPlaceholder}
+                      className="profile-picture"
+                    ></img>
+                  </div>
+                  <div className="card">
+                    <UserForm />
+                  </div>
                 </div>
-                <div className="card">
-                  <UserForm />
-                </div>
-              </div>
-              <br></br>
-              <div className="card-group">
-                {/* <Button className='card profile-btn'>Favorite Recipes</Button>
+                <br></br>
+                <div className="card-group">
+                  {/* <Button className='card profile-btn'>Favorite Recipes</Button>
             <Button className=' card profile-btn'>My Recipes</Button> */}
+                </div>
               </div>
-            </div>
-            {savedRecipes ? (
-              <CallingCard
-                cardData={savedRecipes}
-                showButton={false}
-                showDelete={true}
-              />
-            ) : (
-              <div>No saved Recipes</div>
-            )}
-          </Container>
+              {savedRecipes ? (
+                <CallingCard
+                  cardData={savedRecipes}
+                  showButton={false}
+                  showDelete={true}
+                />
+              ) : (
+                <div>No saved Recipes</div>
+              )}
+            </Container>
+          </div>
         </div>
+        <BottomPage />
       </div>
-      <BottomPage />
-    </div>
+    </>
   );
 };
 

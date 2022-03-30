@@ -1,10 +1,8 @@
-import react from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import { Container, Nav, Navbar, Button } from "react-bootstrap";
 import siteLogo from "../../assets/images/logo.png";
-import Auth from "../../utils/auth";
 
-function Navigation() {
+function Navigation({ showLogOut }) {
   return (
     <div className="App">
       <Navbar
@@ -34,6 +32,11 @@ function Navigation() {
               <Button href="/signup" className="mx-2 sign-up-btn" variant="">
                 Sign up
               </Button>
+              {showLogOut && (
+                <Button href="/signup" className="mx-2 sign-up-btn" variant="">
+                  log Out
+                </Button>
+              )}
             </Nav>
           </Navbar.Collapse>
         </Container>
