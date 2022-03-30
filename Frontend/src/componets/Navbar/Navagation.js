@@ -28,7 +28,7 @@ function Navigation() {
             </Nav>
             <Nav>
               <Nav.Link href="/signin">Log in</Nav.Link>
-              <Button href="/signup" className="mx-2" variant="primary">
+              <Button href="/signup" className="mx-2 sign-up-btn" variant="">
                 Sign up
                 </Button>
                 </Nav>

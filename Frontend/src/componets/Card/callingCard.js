@@ -18,7 +18,7 @@ const CallingCard = ({cardData}) => {
                       <div dangerouslySetInnerHTML={{__html: d.summary}}></div>
                     </Card.Text>
                   </p>
-                  <Button onClick={()=>{window.location.href=d.sourceUrl}} variant="primary">Click Here</Button>
+                  <Button onClick={()=>{window.location.href=d.sourceUrl}} variant="" className="card-btn">Click Here</Button>
                 </Card.Body>
                 </Card>
               </Col>

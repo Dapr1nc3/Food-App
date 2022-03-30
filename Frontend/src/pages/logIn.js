@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Form, Button, Alert, Container } from "react-bootstrap";
 import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from "../utils/mutations";
-import Auth from "../utils/auth";
+import Auth from "../utils/auth";import BottomPage from "../componets/Footer/BottomPage";
+
 
 const LoginForm = () => {
   const [userFormData, setUserFormData] = useState({ email: "", password: "" });
@@ -50,7 +51,13 @@ const LoginForm = () => {
   };
 
   return (
-    <Container className="mx-auto" style={{ width: 500 }}>
+  <>
+  
+  <div className="sign-in-header">
+      <h2 className="text-center">Already have an account? Sign in!</h2>
+  </div>
+    <Container className="mx-auto log-in-container" style={{ width: 500 }}>
+      
       <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
         <Alert
           dismissible
@@ -60,8 +67,9 @@ const LoginForm = () => {
         >
           Something went Wrong with your Login Credentials!
         </Alert>
+        
         <Form.Group>
-          <Form.Label htmlFor="email">Email</Form.Label>
+          <Form.Label htmlFor="email" >Email</Form.Label>
           <Form.Control
             type="text"
             placeholder="Your email"
@@ -69,6 +77,7 @@ const LoginForm = () => {
             onChange={handleInputChange}
             value={userFormData.email}
             required
+            className="email-login-input"
           />
           <Form.Control.Feedback type="invalid">
             Email is Required!
@@ -84,6 +93,7 @@ const LoginForm = () => {
             onChange={handleInputChange}
             value={userFormData.password}
             required
+            className="password-login-input"
           />
           <Form.Control.Feedback type="invalid">
             Password is required!
@@ -92,12 +102,15 @@ const LoginForm = () => {
         <Button
           disabled={!(userFormData.email && userFormData.password)}
           type="submit"
-          variant="success"
+          variant=""
+          className="submit-btn"
         >
           Submit
         </Button>
       </Form>
     </Container>
+    <BottomPage></BottomPage>
+    </>
   );
 };
 

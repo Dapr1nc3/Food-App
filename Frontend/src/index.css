@@ -103,6 +103,11 @@ ul li {
   border-radius: 10px 10px 10px 10px !important;
 }
 
+.card-box {
+  border: #75c9b7 solid 3px !important;
+  border-radius: 15px !important;
+}
+
 
 .grow:hover { 
   transform: scale(1.1); 
@@ -111,6 +116,10 @@ ul li {
 
 .grow { 
   transition: all .2s ease-in-out; 
+}
+
+.sign-up-btn {
+  background-color: #75c9b7 !important;
 }
 
 /* Work on the spacing when growing on mobile devices */
@@ -192,3 +201,44 @@ ul li {
   align-items: center;
 }
 
+.random-btn {
+  background-color: #75c9b7 !important;
+}
+
+
+.card-btn {
+  background-color: #75c9b7 !important;
+}
+
+
+/* Login Page Styling */
+.log-in-container {
+  margin-top: 30px;
+  border: #75c9b7 solid 3px;
+  padding-top: 30px;
+  border-radius: 10px;
+  margin-bottom: 500px;
+}
+
+.sign-in-header {
+  margin-top: 10%;
+}
+
+.submit-btn {
+  margin-top: 2%;
+  background-color: #75c9b7 !important;
+  color: black !important;
+  margin-bottom: 30px;
+}
+
+
+/* Login Page Styling */
+.email-login-input {
+  margin-bottom: 20px !important;
+  max-width: 400px;
+}
+
+.password-login-input {
+  margin-bottom: 20px !important;
+  max-width: 400px;
+}

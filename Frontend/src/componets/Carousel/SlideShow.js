@@ -6,6 +6,7 @@ import data from "../../data/data.json";
 export default function SlideShow() {
   return (
     <div>
+      <h2 className="text-center">Welcome to Food 4 Thought!</h2>
       <Container className="img__container" fluid>
         <div>
           <Carousel className="p-4">
@@ -21,6 +22,7 @@ export default function SlideShow() {
             ))}
           </Carousel>
         </div>
+        <h4 className="text-center">Search bellow to find a recipe or click the button to find a random one!</h4>
       </Container>
     </div>
   );
