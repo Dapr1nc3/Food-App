@@ -34,9 +34,9 @@ const SearchBar = ({ setRecipes }) => {
   };
 
   return (
-    <div>
+    <div className="justify-content-center">
       <>
-        <Form>
+        <Form className="search-form">
           <Form.Group className="mb-3" controlId="formGroupEmail">
             <Form.Label></Form.Label>
             <Form.Control
@@ -45,7 +45,13 @@ const SearchBar = ({ setRecipes }) => {
               ref={searchInput}
             />
           </Form.Group>
-          <Button onClick={runSearch} variant="primary" type="submit">
+          <Button
+            onClick={runSearch}
+            variant=""
+            type="submit"
+            className="random-btn"
+            style={{}}
+          >
             Find Random Recipes
           </Button>
         </Form>

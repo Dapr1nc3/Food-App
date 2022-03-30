@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Klee+One:wght@600&display=swap');
 
 
+/* Main Styling */
 * {
   font-family: 'Klee One', cursive;
 }
@@ -19,13 +20,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+/* Main Styling End */
 
-/* NotFound.js  */
+
+/* NotFound.js Styling  */
 .not-found {
   height: calc(100vh - 56px);
 }
+/* NotFound.js Styling End */
 
-/* About.js */
+/* About.js Styling */
 .about-header {
   padding-right: 40%;
 }
@@ -55,14 +59,13 @@ ul li {
   height: 100%;
 }
 
+/* About.js Styling End */
 
 
-/* callingCard.js */
+
+/* callingCard.js Styling End */
 .container-spacing {
   margin-top: 25px;
-}
-.card__space {
-  margin-bottom: 10px;
 }
 
 .scrollable {
@@ -73,17 +76,19 @@ ul li {
 .card-box {
   width: 600px;
   height: auto;
-  /* margin: 30px auto; */
   margin-right: 20%;
   display: flex;
 }
 
-/* callingCard.js */
 .card__space {
   margin-bottom: 30px;
 }
 
-/* Navagation.js */
+/* callingCard.js Styling End */
+
+
+
+/* Navigation.js Styling */
 .nav__bgColor {
   background-color: rgb(17, 190, 190);
 }
@@ -98,6 +103,11 @@ ul li {
   border-radius: 10px 10px 10px 10px !important;
 }
 
+.card-box {
+  border: #75c9b7 solid 3px !important;
+  border-radius: 15px !important;
+}
+
 
 .grow:hover { 
   transform: scale(1.1); 
@@ -108,7 +118,13 @@ ul li {
   transition: all .2s ease-in-out; 
 }
 
+.sign-up-btn {
+  background-color: #75c9b7 !important;
+}
+
 /* Work on the spacing when growing on mobile devices */
+
+/* Navigation.js Styling End */
 
 
 /* Site Logo Styling */
@@ -120,6 +136,9 @@ ul li {
   transform: scale(1.5);
   transition: .2s ease-in-out;
 }
+/* Logo Styling End */
+
+
 
 /* Profile picture styling */
 .profile-picture {
@@ -128,11 +147,11 @@ ul li {
 
 /* Navbar Styling */
 .nav-bar {
-  background-color: #019b9b !important;
+  background-color: #75c9b7 !important;
 }
 
 .navbar-link:hover {
-  background-color: aquamarine;
+  background-color: aquamarine !important;
 }
 
 .grow {
@@ -165,4 +184,61 @@ ul li {
 /* Footer Styling */
 .main-footer {
   width: 100vw;
+}
+
+
+
+
+/* Main Styling */
+.main-body {
+  background-color: #faedb9;
+}
+
+
+
+/* Search bar Styling */
+.search-form {
+  align-items: center;
+}
+
+.random-btn {
+  background-color: #75c9b7 !important;
+}
+
+
+.card-btn {
+  background-color: #75c9b7 !important;
+}
+
+
+/* Login Page Styling */
+.log-in-container {
+  margin-top: 30px;
+  border: #75c9b7 solid 3px;
+  padding-top: 30px;
+  border-radius: 10px;
+  margin-bottom: 500px;
+}
+
+.sign-in-header {
+  margin-top: 10%;
+}
+
+.submit-btn {
+  margin-top: 2%;
+  background-color: #75c9b7 !important;
+  color: black !important;
+  margin-bottom: 30px;
+}
+
+
+/* Login Page Styling */
+.email-login-input {
+  margin-bottom: 20px !important;
+  max-width: 400px;
+}
+
+.password-login-input {
+  margin-bottom: 20px !important;
+  max-width: 400px;
 }

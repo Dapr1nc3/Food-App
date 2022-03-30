@@ -63,6 +63,7 @@ const CallingCard = ({ cardData, showButton, showDelete }) => {
                   {showButton && (
                     <>
                       <Button
+                        className="card-btn"
                         onClick={() => {
                           window.location.href = d.sourceUrl;
                         }}
@@ -70,13 +71,18 @@ const CallingCard = ({ cardData, showButton, showDelete }) => {
                       >
                         Learn More
                       </Button>
-                      <Button onClick={() => handleSave(d)} variant="primary">
+                      <Button
+                        className="card-btn"
+                        onClick={() => handleSave(d)}
+                        variant="primary"
+                      >
                         Save
                       </Button>
                     </>
                   )}
                   {showDelete && (
                     <Button
+                      className="card-btn"
                       onClick={() => handleUnsave(d.id)}
                       variant="primary"
                     >
