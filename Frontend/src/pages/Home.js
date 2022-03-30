@@ -11,7 +11,7 @@ const Home = () => {
 
   return (
     <>
-    <Container>
+    <Container className="main-page-container">
       <SlideShow />
       <SearchBar setRecipes={setRecipes} />
       {recipes ? (

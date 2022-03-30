@@ -1,17 +1,18 @@
 .main-footer {
   color: white;
-  background-color: rgb(3, 123, 153);
+  background-color: #7bcfbd;
   padding-top: 25px;
+  position: relative;
   bottom: 0;
   width: 100%;
-  margin-top: 50% !important;
-  border-radius: 15px 15px 0 0 ;
+  margin-top: 10% !important;
+  /* border-radius: 15px 15px 0 0 ; */
 }
 
-.main-footer ul {
-  display: flex;
-}
 
-.footer-fluid {
-  display: flex;
+@media screen and (min-width: 768px) {
+  .main-footer {
+    position: absolute;
+    bottom: 0;
+  }
 }

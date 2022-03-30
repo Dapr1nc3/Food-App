@@ -2,6 +2,8 @@ import React from "react";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import aboutImg from "../assets/images/userPlaceholder.png";
 import devinImg from "../assets/images/Devin-pic.jpg";
+import BottomPage from "../componets/Footer/BottomPage";
+
 
 const About = () => {
   return (
@@ -138,6 +140,7 @@ const About = () => {
           </div>
         </div>
       </Container>
+      <BottomPage></BottomPage>
     </div>
   );
 };

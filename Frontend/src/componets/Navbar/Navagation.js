@@ -12,8 +12,8 @@ function Navigation() {
         expand="sm"
         collapseOnSelect
       >
-        <Container>
-          <Navbar.Brand>
+        <Container className="nav-bar">
+          <Navbar.Brand className="nav-bar">
             <Nav.Link href="/">
               <img alt="" src={siteLogo} className="site-logo"></img>
             </Nav.Link>
