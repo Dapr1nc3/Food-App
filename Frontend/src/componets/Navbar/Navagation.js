@@ -32,11 +32,10 @@ function Navigation({ showLogOut }) {
               <Button href="/signup" className="mx-2 sign-up-btn" variant="">
                 Sign up
               </Button>
-              {showLogOut && (
-                <Button href="/signup" className="mx-2 sign-up-btn" variant="">
-                  log Out
-                </Button>
-              )}
+
+              <Button href="/signup" className="mx-2 sign-up-btn" variant="">
+                log Out
+              </Button>
             </Nav>
           </Navbar.Collapse>
         </Container>

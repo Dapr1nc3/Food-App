@@ -39,7 +39,7 @@ const BottomPage = () => {
           <hr />
           <div className="row text-center">
             <p className="col-sm">
-              &copy;{new Date().getFullYear()} Binary Brians INC | All rights
+              &copy;{new Date().getFullYear()} Binary Brains INC | All rights
               reserved | Privacy
             </p>
           </div>
