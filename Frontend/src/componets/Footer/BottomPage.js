@@ -4,35 +4,37 @@ import "./BottomPage.css";
 const BottomPage = () => {
   return (
     <>
-      <div className="main-footer">
-        <div className="container">
+      <footer className="main-footer">
+        <div className="" fluid>
           <div className="row">
-            <div className="col">
-              <h4>H4 GOES HERE</h4>
-              <ul className="list-unstyled">
-                <li>321-321-3211</li>
-                <li>Orlando, Florida</li>
-                <li>That place around the corner</li>
-              </ul>
+            <div className="text-center">
+              <h4>Contact Information</h4>
+              <p>
+                Orlando FL
+                <br></br>
+                (321)123-4567
+                <br></br>
+                Email: food4thoughtcontact@gmail.com
+              </p>
             </div>
 
-            <div className="col">
+            {/* <div className="col">
               <h4>STUFF WILL GO HERE</h4>
               <ul className="list-unstyled">
                 <li>content here</li>
                 <li>contnet here</li>
                 <li>contnet here</li>
               </ul>
-            </div>
+            </div> */}
 
-            <div className="col">
+            {/* <div className="col">
               <h4>ANOTHER ONE</h4>
               <ul className="list-unstyled">
                 <li>content here</li>
                 <li>contnet here</li>
                 <li>contnet here</li>
               </ul>
-            </div>
+            </div> */}
           </div>
           <hr />
           <div className="row text-center">
@@ -42,7 +44,7 @@ const BottomPage = () => {
             </p>
           </div>
         </div>
-      </div>
+      </footer>
     </>
   );
 };

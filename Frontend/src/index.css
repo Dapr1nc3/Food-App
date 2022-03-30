@@ -1,3 +1,11 @@
+/* Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Klee+One:wght@600&display=swap');
+
+
+* {
+  font-family: 'Klee One', cursive;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -23,8 +31,6 @@ code {
 }
 
 .about-image {
-<<<<<<< HEAD
-=======
   display: flex;
 }
 
@@ -39,6 +45,14 @@ ul li {
   float: left;
   padding-left: 0;
   margin: 10px;
+}
+
+.about-description {
+  padding: 5%;
+}
+
+.picture-about-size {
+  height: 100%;
 }
 
 
@@ -60,7 +74,6 @@ ul li {
   width: 600px;
   height: auto;
   /* margin: 30px auto; */
->>>>>>> develop
   margin-right: 20%;
   display: flex;
 }
@@ -141,12 +154,6 @@ ul li {
 .img__carousel {
   max-height: 500px;
   width: 100%;
-<<<<<<< HEAD
-}
-
-
-/* Profile.js */
-=======
 
 }
 
@@ -154,4 +161,8 @@ ul li {
 
 /* Profile.js */
 
->>>>>>> develop
+
+/* Footer Styling */
+.main-footer {
+  width: 100vw;
+}
