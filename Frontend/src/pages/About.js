@@ -1,5 +1,6 @@
 import React from "react";
 import { Container } from "react-bootstrap";
+import BottomPage from "../componets/Footer/BottomPage";
 import aboutImg from "../assets/images/userPlaceholder.png";
 import devinImg from "../assets/images/Devin-pic.jpg";
 
@@ -22,24 +23,36 @@ const About = () => {
           </div>
           <div className="card">
             <p className="about-description">
-                Hello, you will see my
-                projects, skills attained. Contact, and About me, sections are located
-                on this portfolio. Now, to describe myself, and the things I like in a
-                short paragraph is difficult, but in short, I love my family. I enjoy
-                multiple outdoor activities, sports competitions, as well as....
-                coding! I've always had an interest in it and how coding works, so I
-                took the leap of faith in the area and wouldn't have imagined myself
-                living at my desk. Enjoying the coding world is a big thing for me and
-                it's very fun most of the time. I've met a lot of fun and interesting
-                people in this field.
+              Hello, you will see my projects, skills attained. Contact, and
+              About me, sections are located on this portfolio. Now, to describe
+              myself, and the things I like in a short paragraph is difficult,
+              but in short, I love my family. I enjoy multiple outdoor
+              activities, sports competitions, as well as.... coding! I've
+              always had an interest in it and how coding works, so I took the
+              leap of faith in the area and wouldn't have imagined myself living
+              at my desk. Enjoying the coding world is a big thing for me and
+              it's very fun most of the time. I've met a lot of fun and
+              interesting people in this field.
             </p>
 
             {/* Footer */}
             <footer>
-            <ul>
-                <li><a href="https://www.github.com"><i class="fa-brands fa-github fa-2xl"></i></a></li>
-                <li><a href="https://www.linkedin.com"><i class="fa-brands fa-linkedin fa-2xl"></i></a></li>
-                <li><a href="https://www.facebook.com"><i class="fa-brands fa-facebook fa-2xl"></i></a></li>
+              <ul>
+                <li>
+                  <a href="https://www.github.com">
+                    <i class="fa-brands fa-github fa-2xl"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.linkedin.com">
+                    <i class="fa-brands fa-linkedin fa-2xl"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com">
+                    <i class="fa-brands fa-facebook fa-2xl"></i>
+                  </a>
+                </li>
               </ul>
             </footer>
           </div>
@@ -53,24 +66,36 @@ const About = () => {
           </div>
           <div className="card">
             <p className="about-description">
-                Hello, you will see my
-                projects, skills attained. Contact, and About me, sections are located
-                on this portfolio. Now, to describe myself, and the things I like in a
-                short paragraph is difficult, but in short, I love my family. I enjoy
-                multiple outdoor activities, sports competitions, as well as....
-                coding! I've always had an interest in it and how coding works, so I
-                took the leap of faith in the area and wouldn't have imagined myself
-                living at my desk. Enjoying the coding world is a big thing for me and
-                it's very fun most of the time. I've met a lot of fun and interesting
-                people in this field.
+              Hello, you will see my projects, skills attained. Contact, and
+              About me, sections are located on this portfolio. Now, to describe
+              myself, and the things I like in a short paragraph is difficult,
+              but in short, I love my family. I enjoy multiple outdoor
+              activities, sports competitions, as well as.... coding! I've
+              always had an interest in it and how coding works, so I took the
+              leap of faith in the area and wouldn't have imagined myself living
+              at my desk. Enjoying the coding world is a big thing for me and
+              it's very fun most of the time. I've met a lot of fun and
+              interesting people in this field.
             </p>
 
             {/* Footer */}
             <footer>
-            <ul>
-                <li><a href="https://www.github.com"><i class="fa-brands fa-github fa-2xl"></i></a></li>
-                <li><a href="https://www.linkedin.com"><i class="fa-brands fa-linkedin fa-2xl"></i></a></li>
-                <li><a href="https://www.facebook.com"><i class="fa-brands fa-facebook fa-2xl"></i></a></li>
+              <ul>
+                <li>
+                  <a href="https://www.github.com">
+                    <i class="fa-brands fa-github fa-2xl"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.linkedin.com">
+                    <i class="fa-brands fa-linkedin fa-2xl"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com">
+                    <i class="fa-brands fa-facebook fa-2xl"></i>
+                  </a>
+                </li>
               </ul>
             </footer>
           </div>
@@ -84,24 +109,36 @@ const About = () => {
           </div>
           <div className="card">
             <p className="about-description">
-                Hello, you will see my
-                projects, skills attained. Contact, and About me, sections are located
-                on this portfolio. Now, to describe myself, and the things I like in a
-                short paragraph is difficult, but in short, I love my family. I enjoy
-                multiple outdoor activities, sports competitions, as well as....
-                coding! I've always had an interest in it and how coding works, so I
-                took the leap of faith in the area and wouldn't have imagined myself
-                living at my desk. Enjoying the coding world is a big thing for me and
-                it's very fun most of the time. I've met a lot of fun and interesting
-                people in this field.
+              Hello, you will see my projects, skills attained. Contact, and
+              About me, sections are located on this portfolio. Now, to describe
+              myself, and the things I like in a short paragraph is difficult,
+              but in short, I love my family. I enjoy multiple outdoor
+              activities, sports competitions, as well as.... coding! I've
+              always had an interest in it and how coding works, so I took the
+              leap of faith in the area and wouldn't have imagined myself living
+              at my desk. Enjoying the coding world is a big thing for me and
+              it's very fun most of the time. I've met a lot of fun and
+              interesting people in this field.
             </p>
 
             {/* Footer */}
             <footer>
-            <ul>
-                <li><a href="https://www.github.com"><i class="fa-brands fa-github fa-2xl"></i></a></li>
-                <li><a href="https://www.linkedin.com"><i class="fa-brands fa-linkedin fa-2xl"></i></a></li>
-                <li><a href="https://www.facebook.com"><i class="fa-brands fa-facebook fa-2xl"></i></a></li>
+              <ul>
+                <li>
+                  <a href="https://www.github.com">
+                    <i class="fa-brands fa-github fa-2xl"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.linkedin.com">
+                    <i class="fa-brands fa-linkedin fa-2xl"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com">
+                    <i class="fa-brands fa-facebook fa-2xl"></i>
+                  </a>
+                </li>
               </ul>
             </footer>
           </div>
@@ -115,29 +152,42 @@ const About = () => {
           </div>
           <div className="card">
             <p className="about-description">
-                Hello, you will see my
-                projects, skills attained. Contact, and About me, sections are located
-                on this portfolio. Now, to describe myself, and the things I like in a
-                short paragraph is difficult, but in short, I love my family. I enjoy
-                multiple outdoor activities, sports competitions, as well as....
-                coding! I've always had an interest in it and how coding works, so I
-                took the leap of faith in the area and wouldn't have imagined myself
-                living at my desk. Enjoying the coding world is a big thing for me and
-                it's very fun most of the time. I've met a lot of fun and interesting
-                people in this field.
+              Hello, you will see my projects, skills attained. Contact, and
+              About me, sections are located on this portfolio. Now, to describe
+              myself, and the things I like in a short paragraph is difficult,
+              but in short, I love my family. I enjoy multiple outdoor
+              activities, sports competitions, as well as.... coding! I've
+              always had an interest in it and how coding works, so I took the
+              leap of faith in the area and wouldn't have imagined myself living
+              at my desk. Enjoying the coding world is a big thing for me and
+              it's very fun most of the time. I've met a lot of fun and
+              interesting people in this field.
             </p>
 
             {/* Footer */}
             <footer>
-            <ul>
-                <li><a href="https://www.github.com"><i class="fa-brands fa-github fa-2xl"></i></a></li>
-                <li><a href="https://www.linkedin.com"><i class="fa-brands fa-linkedin fa-2xl"></i></a></li>
-                <li><a href="https://www.facebook.com"><i class="fa-brands fa-facebook fa-2xl"></i></a></li>
+              <ul>
+                <li>
+                  <a href="https://www.github.com">
+                    <i class="fa-brands fa-github fa-2xl"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.linkedin.com">
+                    <i class="fa-brands fa-linkedin fa-2xl"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com">
+                    <i class="fa-brands fa-facebook fa-2xl"></i>
+                  </a>
+                </li>
               </ul>
             </footer>
           </div>
         </div>
       </Container>
+      <BottomPage />
     </div>
   );
 };

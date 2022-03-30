@@ -12,11 +12,6 @@ export default function SlideShow() {
             {data.map((d, i) => (
               <Carousel.Item className="img__carousel" key={i}>
                 <img className="d-block w-100" src={d.imageUrl} alt={d.label} />
-
-                <Carousel.Caption>
-                  <h3>{d.label}</h3>
-                  <p>{d.text}</p>
-                </Carousel.Caption>
               </Carousel.Item>
             ))}
           </Carousel>

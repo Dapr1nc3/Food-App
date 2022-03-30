@@ -2,10 +2,11 @@ import React from "react";
 // import { useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import { QUERY_USER } from "../utils/queries";
+import UserForm from "../componets/userForm/userForm";
+import BottomPage from "../componets/Footer/BottomPage";
 import userPlaceholder from "../assets/images/profile-placeholder.png";
 import Auth from "../utils/auth";
-
-import { Container } from "react-bootstrap";
+import { Container, Form } from "react-bootstrap";
 
 const Profile = (props) => {
   // const { username: userParam } = useParams();
@@ -58,7 +59,9 @@ const Profile = (props) => {
                     className="profile-picture"
                   ></img>
                 </div>
-                <div className="card"></div>
+                <div className="card">
+                  <UserForm />
+                </div>
               </div>
               <br></br>
               <div className="card-group">
@@ -69,6 +72,7 @@ const Profile = (props) => {
           </Container>
         </div>
       </div>
+      <BottomPage />
     </div>
   );
 };
