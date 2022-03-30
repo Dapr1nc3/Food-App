@@ -93,16 +93,6 @@ const CallingCard = ({ cardData, showButton, showDelete }) => {
               </Card>
             </Col>
           ))}
-          {/* <div className="App">
-            {value}
-            <input
-              name="Input"
-              id="Input"
-              type="text"
-              onChange={(e) => setValue(e.target.value)}
-              value={value}
-            />
-          </div> */}
         </Row>
       </Container>
     </div>

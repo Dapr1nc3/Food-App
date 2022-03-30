@@ -24,44 +24,17 @@ function Navigation() {
 
           <Navbar.Toggle />
           <Navbar.Collapse>
-            {Auth.loggedIn() ? (
-              <>
-                <Nav className="me-auto">
-                  <Nav.Link href="/">Home</Nav.Link>
-                  <Nav.Link href="/about">About</Nav.Link>
-                  <Nav.Link href="/profile">Profile</Nav.Link>
-                </Nav>
-                <Nav>
-                  {/* <Nav.Link href="/signin">Log in</Nav.Link> */}
-                  {/* <Button href="/signup" className="mx-2" variant="primary">
+            <Nav className="me-auto">
+              <Nav.Link href="/">Home</Nav.Link>
+              <Nav.Link href="/about">About</Nav.Link>
+              <Nav.Link href="/profile">Profile</Nav.Link>
+            </Nav>
+            <Nav>
+              <Nav.Link href="/signin">Log in</Nav.Link>
+              <Button href="/signup" className="mx-2 sign-up-btn" variant="">
                 Sign up
-              </Button> */}
-                  <Button
-                    onClick={Auth.logout()}
-                    type="button"
-                    href="/logout"
-                    className="mx-2"
-                    variant="primary"
-                  >
-                    Log Out
-                  </Button>
-                </Nav>
-              </>
-            ) : (
-              <>
-                <Nav className="me-auto">
-                  <Nav.Link href="/">Home</Nav.Link>
-                  <Nav.Link href="/about">About</Nav.Link>
-                  {/* <Nav.Link href="/profile">Profile</Nav.Link> */}
-                </Nav>
-                <Nav>
-                  <Nav.Link href="/signin">Log in</Nav.Link>
-                  <Button href="/signup" className="mx-2" variant="primary">
-                    Sign up
-                  </Button>
-                </Nav>
-              </>
-            )}
+              </Button>
+            </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>

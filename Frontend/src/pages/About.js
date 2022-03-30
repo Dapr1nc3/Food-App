@@ -39,18 +39,13 @@ const About = () => {
             <footer>
               <ul>
                 <li>
-                  <a href="https://www.github.com">
+                  <a href="https://github.com/Dapr1nc3">
                     <i class="fa-brands fa-github fa-2xl"></i>
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.linkedin.com">
+                  <a href="https://www.linkedin.com/in/devin-minnis-082a95217/">
                     <i class="fa-brands fa-linkedin fa-2xl"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://www.facebook.com">
-                    <i class="fa-brands fa-facebook fa-2xl"></i>
                   </a>
                 </li>
               </ul>
