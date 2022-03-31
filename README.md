@@ -13,7 +13,7 @@
 No installations are required. Just go to the deployed application:
 https://immense-shelf-25976.herokuapp.com/
 
-### Bellow you can see an example of the site:
+### Below you can see an example of the site:
 ---
 ![Food 4 Thought](https://github.com/Dapr1nc3/Food-App/blob/workspace-luis/Frontend/src/assets/images/food4though-demo.gif)
 
